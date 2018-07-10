@@ -84,20 +84,27 @@ div.mobile-menu ul{
   {
     margin-bottom: 0px;
   }
-    ul.normal-menu li.dropdown
-    {
-        display: none;
-    }
-    li.mobile-btn
-    {
-      margin: 6px 0px;
-      float:right;
-      display:inline-block;
-    }
-    div#mobile-menu ul li {
-      display:block;
-      text-align:center;
-    }
+  ul.normal-menu li.dropdown
+  {
+      display: none;
+  }
+  li.mobile-btn
+  {
+    margin: 6px 0px;
+    float:right;
+    display:inline-block;
+  }
+  div#mobile-menu ul li {
+    display:block;
+    text-align:center;
+  }
+  ul.child
+  {
+    text-align: center;
+  }
+  li.sub ul {
+    display:none;
+  }
 }
 
 /* flex styles */

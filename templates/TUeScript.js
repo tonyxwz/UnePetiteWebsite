@@ -9,14 +9,11 @@ $(document).ready(function(){
             $('#mobile-menu').css('display', 'none')
         }
     });
-
+    var showul = false;
     $(document).ready(function(){
-        $('li.sub').hover(
+        $('li.sub').click(
         function(){
-            $(this).find('ul.child').show();
-        },
-        function(){
-            $(this).find('ul.child').hide();
+            $(this).find('ul.child').toggle();
         });
     });
 })
