@@ -1,0 +1,185 @@
+<html>
+<!-- remove when upload -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- remove when upload -->
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+
+<!-- keep internal styles and scripts above templates -->
+<style id="menustyle" type="text/css">
+</style>
+<script id="menuscript" type="text/javascript">
+</script>
+
+<!-- CHANGE to template when upload -->
+<!-- 
+</html>
+{{:Team:TU-Eindhoven/TUeStyle}}
+{{:Team:TU-Eindhoven/flexboxgrid2}}
+<html>
+ -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.1.0/flexboxgrid2.css"> -->
+<link rel="stylesheet" type="text/css" href="../venders/css/flexboxgrid2.css">
+
+<script src="TUeScript.js"></script>
+
+<!-- Whole igem page container, closed in separate pages-->
+<div class="container">
+    <script>
+        bGenerateCat = true;
+    </script>
+    <!-- Navigation bar -->
+    <div class="nav-bar">
+        <ul class="normal-menu">
+            <li style="margin:5px 30px;float:left;">
+                <a class="logo-a" href="http://2018.igem.org/Team:TU-Eindhoven">
+                    <img src="../images/LogoSimple500x500.png" alt="TUe logo" style="max-height:60px">
+                </a>
+            </li>
+            <!-- Project -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">PROJECT</a>
+                <div class="dropdown-content">
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Description">Description</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Design">Design</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Experiments">Experiments</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Notebook">Notebook</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/InterLab">InterLab</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Model">Model</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Results">Results</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Demonstrate">Demonstrate</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Improve">Improve</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Attributions">Attributions</a>
+                </div>
+            </li>
+            <!-- Team -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">TEAM</a>
+                <div class="dropdown-content">
+                <a href='http://2018.igem.org/Team:TU-Eindhoven/Team'>Team Members</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Collaborations">Collaborations</a>
+                </div>
+            </li>
+            <!-- Parts -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">PARTS</a>
+                <div class="dropdown-content">
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Parts">Parts Overview</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Basic_Part">Basic Parts</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Composite_Part">Composite Parts</a>
+                </div>
+            </li>
+            <!-- Safety -->
+            <li class="dropdown">
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Safety" class="dropbtn">SAFETY</a>
+            </li>
+            <!-- Human Practice -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">HUMAN PRACTICE</a>
+                <div class="dropdown-content">
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Human_Practices">Human Practices</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Public_Engagement">Education &amp; Engagement</a>
+                </div>
+            </li>
+            <!-- Awards -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">AWARDS</a>
+                <div class="dropdown-content">
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Applied_Design">Applied Design</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Entrepreneurship">Entrepreneurship</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Hardware">Hardware</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Measurement">Measurement</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Model">Model</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Plant">Plant</a>
+                <a href="http://2018.igem.org/Team:TU-Eindhoven/Software">Software</a>
+                <a href="http://igem.org/2018_Judging_Form?team=TU-Eindhoven" class="dropbtn">JUDGING FORM ⇗</a>
+                </div>
+            </li>
+            <!-- Mobile Menu -->
+            <li id="mobile-btn" class="mobile-btn"><a href="#">
+                <img id="mobileMenuBar" src="http://igem.org/wiki/images/3/3b/Menu_icon.svg">
+            </a></li>
+        </ul>
+    </div>
+
+    <!-- Mobile Menu Bar -->
+    <div class="mobile-menu">
+        <ul class="mobile-menu-list">
+        <!-- Project -->
+        <li class="sub">
+            <a href="javascript:void(0)" class="dropbtn">PROJECT</a>
+            <ul class="child">
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Description">Description</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Design">Design</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Experiments">Experiments</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Notebook">Notebook</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/InterLab">InterLab</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Model">Model</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Results">Results</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Demonstrate">Demonstrate</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Improve">Improve</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Attributions">Attributions</a></li>
+            </ul>
+        </li>
+        <!-- Team -->
+        <li class="sub">
+            <a href="javascript:void(0)" class="dropbtn">TEAM</a>
+            <ul class="child">
+            <li><a href='http://2018.igem.org/Team:TU-Eindhoven/Team'>Team Members</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Collaborations">Collaborations</a></li>
+            </ul>
+        </li>
+        <!-- Parts -->
+        <li class="sub">
+            <a href="javascript:void(0)" class="dropbtn">PARTS</a>
+            <ul class="child">
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Parts">Parts Overview</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Basic_Part">Basic Parts</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Composite_Part">Composite Parts</a></li>
+            </ul>
+        </li>
+        <!-- Safety -->
+        <li class="sub">
+            <a href="http://2018.igem.org/Team:TU-Eindhoven/Safety" class="dropbtn">SAFETY</a>
+        </li>
+        <!-- Human Practice -->
+        <li class="sub">
+            <a href="javascript:void(0)" class="dropbtn">HUMAN PRACTICE</a>
+            <ul class="child">
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Human_Practices">Human Practices</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Public_Engagement">Education &amp; Engagement</a></li>
+            </ul>
+        </li>
+        <!-- Awards -->
+        <li class="sub">
+            <a href="javascript:void(0)" class="dropbtn">AWARDS</a>
+            <ul class="child">
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Applied_Design">Applied Design</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Entrepreneurship">Entrepreneurship</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Hardware">Hardware</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Measurement">Measurement</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Model">Model</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Plant">Plant</a></li>
+            <li><a href="http://2018.igem.org/Team:TU-Eindhoven/Software">Software</a></li>
+            <li><a href="http://igem.org/2018_Judging_Form?team=TU-Eindhoven">JUDGING FORM ⇗</a></li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+
+    <!-- content start -->
+    <div class="contents row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+            <div id="docJump" class="doc-catalogue box-row"></div>
+        </div>
+        <div id="docContent" class="doc-content col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
+        
+        </div>
+    </div>
+    
+</div>
+</html>
