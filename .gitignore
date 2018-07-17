@@ -1,2 +1,5 @@
 templates/test.html
 images/
+Resources/
+*.zip
+description.txt

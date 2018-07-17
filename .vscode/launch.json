@@ -11,7 +11,6 @@
             "request": "launch",
             "reAttach": true,
             "file": "${workspaceFolder}/templates/NavMenu.html",
-            "firefoxExecutable":"C:\\Install\\Mozilla\\Firefox Developer Edition\\firefox.exe"
         },
         {
             "name": "Launch localhost",
@@ -20,7 +19,6 @@
             "reAttach": true,
             "url": "http://localhost/index.html",
             "webRoot": "${workspaceFolder}",
-            "firefoxExecutable":"C:\\Install\\Mozilla\\Firefox Developer Edition\\firefox.exe"
         },
         {
             "name": "Attach",
@@ -34,7 +32,6 @@
             "reAttach": true,
             "addonType": "webExtension",
             "addonPath": "${workspaceFolder}",
-            "firefoxExecutable":"C:\\Install\\Mozilla\\Firefox Developer Edition\\firefox.exe"
         }
     ]
 }
