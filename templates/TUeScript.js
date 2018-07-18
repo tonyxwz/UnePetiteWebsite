@@ -19,6 +19,7 @@ $(document).ready(function(){
     
     $('li.sub').click(function(){
         $(this).find('ul.child').toggle();
+        $(this).siblings().find('ul.child').hide();
     });
     if (bGenerateCat)
     {
