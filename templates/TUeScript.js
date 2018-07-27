@@ -1,5 +1,8 @@
 /*<html>
 <script>*/
+var toc;
+var footer;
+
 $(document).ready(function(){
     $('#mobile-btn').click(function(){
         var display = $('.mobile-menu-list').css('display');
@@ -16,6 +19,7 @@ $(document).ready(function(){
         $('.mobile-menu-list').css('display', 'none');
         $('.normal-menu').css('border-radius', '5px 5px 5px 5px');
         setTOCWidth();
+        // setMenuWidth();
     });
     
     $('li.sub').click(function(){
@@ -26,7 +30,26 @@ $(document).ready(function(){
     {
         catalogueGen();
     }
+    toc = document.getElementById('toc-container');
+    footer = document.getElementById('footer-container');
+    // setMenuWidth();
+    window.addEventListener('scroll', onScrollHandler);
 });
+
+function setMenuWidth(){
+    var width1 = $(".nav-bar").width();
+    var width2 = $(".logo-a").width();
+    console.log(width1);
+    console.log(width2);
+    var menus = $(".dropdown");
+    //console.log(menus);
+    var w = (width1 - width2 -100) / menus.length;
+    console.log(w);
+    $(".dropdown").width(w);
+    // $.each(menus, function(idx,val){
+    //     val.width(w);
+    // });
+}
 
 function catalogueGen(){
     var sections = document.querySelectorAll("div#docContent div.sect");
@@ -57,12 +80,12 @@ function catalogueGen(){
     
     // set width of toc
     setTOCWidth();
-    $("#docJump").html(htmlList.join(""));
-    $('#docJump').toggle();
+    $("#toc-container").html(htmlList.join(""));
+    $('#toc-container').toggle();
 }
 
 function setTOCWidth(){
-    var divtoc = document.querySelector("#docJump");
+    var divtoc = document.querySelector("#toc-container");
     divtoc.style.width = divtoc.parentNode.clientWidth - 10;
 }
 
@@ -71,5 +94,22 @@ function idFromTxt(txt,el){
     el.id = elid;
     return elid;
 }
+
+// make toc smooth with scrolling
+function onScrollHandler(){
+    var maxScroll = document.documentElement.offsetHeight -
+        toc.offsetHeight - footer.offsetHeight - 100;
+    var currentScroll = document.scrollingElement.scrollTop;
+
+    
+    if (currentScroll >= maxScroll) {
+        toc.classList.add('abs-toc');
+        toc.classList.remove('fixed-toc');
+    } else {
+        toc.classList.add('fixed-toc');
+        toc.classList.remove('abs-toc');
+    }
+}
+
 /*</script>
 </html>*/

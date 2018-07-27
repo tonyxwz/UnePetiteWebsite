@@ -27,9 +27,7 @@
 
 <script src="TUeScript.js"></script>
 
-<!-- Whole igem page container, closed in separate pages-->
-<div class="container">
-
+<div class="row" id="nav-container">
     <!-- Navigation bar -->
     <div class="nav-bar">
         <ul class="normal-menu">
@@ -168,11 +166,14 @@
         </li>
         </ul>
     </div>
+</div>
+<!-- Whole igem page container, closed in separate pages-->
+<div class="container" id="main-container">
 
     <!-- content start -->
     <div class="contents row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
-            <div id="docJump" class="doc-catalogue" style="display:none;">
+        <div class="relative-pos col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+            <div id="toc-container" class="doc-catalogue" style="display:none;">
                 Life is like riding a bicycle. To keep your balance you must keep moving.
             </div>
         </div>
@@ -268,20 +269,47 @@
         </div>
     </div>
     <!-- footer starts -->
-    <div class="footer">
+    <div class="footer" id="footer-container">
         <div class="contact-tue">
             - facebook
             - email
             - twitter
         </div>
-        <div class="sponsors-list">
-            - microsoft
-            - google
-            - amazon
-            - huawei
-            - intel
-            - klm
-            - philips
+        <div class="sponsors-list row">
+            <div class="col-xs-6 col-xl-3 col-lg-4 col-sm-6">
+                <a href="https://www.microsoft.com">
+                    <img class="sponsoren" src="../images/playwith/2000px-Microsoft_logo_(2012).svg.png">
+                </a>
+            </div>
+
+            <div class="col-xs-6 col-xl-3 col-lg-4 col-sm-6">
+                <a href="https://www.microsoft.com">
+                    <img class="sponsoren" src="../images/playwith/2000px-KLM_logo.svg.png">
+                </a>
+            </div>
+
+            <div class="col-xs-6 col-xl-3 col-lg-4 col-sm-6">
+                <a href="https://www.microsoft.com">
+                    <img class="sponsoren" src="../images/playwith/2000px-Google_2015_logo.svg.png">
+                </a>
+            </div>
+
+            <div class="col-xs-6 col-xl-3 col-lg-4 col-sm-6">
+                <a href="https://www.microsoft.com">
+                    <img class="sponsoren" src="../images/playwith/intel.png">
+                </a>
+            </div>
+
+            <div class="col-xs-6 col-xl-3 col-lg-4 col-sm-6">
+                <a href="https://www.microsoft.com">
+                    <img class="sponsoren" src="../images/playwith/Philips shield 2013.png">
+                </a>
+            </div>
+            <div class="col-xs-6 col-xl-3 col-lg-4 col-sm-6">
+                <a href="https://www.microsoft.com">
+                    <img class="sponsoren" src="../images/playwith/huawei.png">
+                </a>
+            </div>
         </div>
     </div>
 </div>
