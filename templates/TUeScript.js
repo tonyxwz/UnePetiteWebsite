@@ -8,16 +8,13 @@ $(document).ready(function(){
         var display = $('.mobile-menu-list').css('display');
         if(display == "none"){
             $('.mobile-menu-list').css('display', 'flex');
-            $('.normal-menu').css('border-radius', '5px 5px 0px 0px');
         }else{
             $('.mobile-menu-list').css('display', 'none');
-            $('.normal-menu').css('border-radius', '5px 5px 5px 5px');
         }
     });
 
     $(window).resize(function(){
         $('.mobile-menu-list').css('display', 'none');
-        $('.normal-menu').css('border-radius', '5px 5px 5px 5px');
         setTOCWidth();
         // setMenuWidth();
     });
@@ -26,14 +23,16 @@ $(document).ready(function(){
         $(this).find('ul.child').toggle();
         $(this).siblings().find('ul.child').hide();
     });
-    if (bGenerateCat)
-    {
-        catalogueGen();
-    }
+
     toc = document.getElementById('toc-container');
     footer = document.getElementById('footer-container');
     // setMenuWidth();
     window.addEventListener('scroll', onScrollHandler);
+
+    if (bGenerateCat)
+    {
+        catalogueGen();
+    }
 });
 
 function setMenuWidth(){
@@ -86,7 +85,7 @@ function catalogueGen(){
 
 function setTOCWidth(){
     var divtoc = document.querySelector("#toc-container");
-    divtoc.style.width = divtoc.parentNode.clientWidth - 10;
+    divtoc.style.width = (divtoc.parentNode.clientWidth - 10).toString() + 'px';
 }
 
 function idFromTxt(txt,el){
