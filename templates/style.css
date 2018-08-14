@@ -250,6 +250,8 @@ div.contents {
 .container
 {
   margin-top:80px;
+  background: #ffffff;
+  box-shadow: 2px 2px 10px #919191;
 }
 /* footer */
 .footer
