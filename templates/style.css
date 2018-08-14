@@ -241,7 +241,7 @@ div.contents {
 .footer
 {
   margin-top:7px;
-  background-color:green;
+  background-color:rgb(126, 167, 147);
   padding:25px;
   text-align: center;
 }
@@ -259,9 +259,6 @@ div.contents {
 {
   width:100px;
 }
-.sponsors-list a
-{
-}
 .sponsoren
 {
   width:20%;
@@ -278,7 +275,7 @@ body {
   font-size: 20px;
   font-family: proxima-nova,"Open Sans","Gill Sans MT","Gill Sans",Corbel,Arial,sans-serif;
   font-weight: normal;
-  background: #eee;
+  /* background: #eee; */
 }
 h1,
 h2,
@@ -481,4 +478,43 @@ ul.normal-menu li
 #HQ_page p
 {
   font-size:100%;
+}
+
+/* team page */
+.team-intro h1
+{
+  text-align: center;
+  font-size:4rem;
+  color: rgb(147, 180, 145);
+}
+.member
+{
+  margin:5px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  opacity: 1;
+}
+.member:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.2);
+}
+.member.col-sm-6.col-md-3 {
+  padding:0;
+}
+.foto img {
+  width:100%;
+  border-radius: 5px 5px 0 0;
+}
+.fengexian {
+  color: #CCDFCB;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right:10%;
+  margin-left: 10%;
+}
+.bio > h1
+{
+  font-size:1rem;
 }
