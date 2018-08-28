@@ -28,7 +28,7 @@ $(document).ready(function(){
     footer = document.getElementById('footer-container');
     // setMenuWidth();
     window.addEventListener('scroll', onScrollHandler);
-
+    insertExplanation();
     if (bGenerateCat)
     {
         catalogueGen();
@@ -110,5 +110,24 @@ function onScrollHandler(){
     }
 }
 
+function insertExplanation(){
+    // insert click-to-elaborate events
+    var sp = document.getElementsByClassName("klk2elaborate");
+    var i;
+
+    for(i=0;i<sp.length;i++){
+        sp[i].addEventListener('click', onElaborateHandler);
+        console.log(sp[i]);
+    }
+}
+
+function onElaborateHandler(e){
+    if (this.parentNode.nextElementSibling.style.display === "block") {
+        this.parentNode.nextElementSibling.style.display = "none";
+    } else {
+        this.parentNode.nextElementSibling.style.display = "block";
+    }
+    
+}
 /*</script>
 </html>*/
