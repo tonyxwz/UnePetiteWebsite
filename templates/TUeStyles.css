@@ -1,17 +1,161 @@
-/* <html>
-<style> */
+/* Nav bar */
+.navbar {
+  margin-bottom: 0;
+  margin-top: 15px;
+  z-index: 999;
+}
+.logo {
+  padding:5px;
+}
+.logo > img {
+  height: 100%
+}
+.navbar-fixed-top + div {
+  margin-top:65px;
+}
+.white {
+  background-color:white;
+}
+.neat {
+  margin-top:0;
+  margin-bottom: 0;
+}
+.logbook {
+  background: white url("http://2018.igem.org/wiki/images/1/1e/T--TU-Eindhoven--logBG.png") repeat-y;
+  padding: 15px 25px 25px 85px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: left;
+}
+h1,
+h2 {
+	font-weight: bold;
+}
+p {
+	font-size: 16px;
+}
+.jumbotron {
+	background: #27A967;
+	text-align: center;
+}
+.jumbotron p {
+	font-size: 20px;
+}
 
-/* flex styles */
+.navbar-inverse {
+	background: #2E2F31;
+	border: 0;
+}
+.navbar-inverse .navbar-nav li a {
+	color: #f7f7f7;
+	font-size: 16px;
+}
+.navbar-inverse .navbar-nav li a:hover {
+	background: #27A967;
+}
+.dropdown-menu {
+	background: #2E2F31;
+	border-radius: 0;
+	border: 0;
+}
+.dropdown-menu li a {
+	padding: 10px;
+}
+.navbar-inverse .navbar-nav .dropdown-menu li a:hover {
+	background: #2C463C;
+}
+
+/* footer */
+.footer {
+  /* webkit example */
+  /* background-image: -webkit-gradient(
+    linear, right top, left top, from(rgba(255, 255, 255, 1.0)),
+    to(rgba(255, 255, 255, 0))
+  ); */
+
+  /* mozilla example - FF3.6+ */
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0), rgba(255, 255, 255, 1.0)
+  );
+
+  /* IE 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    gradientType=1, startColor=0, endColorStr=#FFFFFF
+  );
+
+  /* IE8 uses -ms-filter for whatever reason... */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+    gradientType=1, startColor=0, endColoStr=#FFFFFF
+  );
+  margin-top:7px;
+  padding:25px;
+  padding-bottom: 0px;
+  text-align: center;
+  width: 100%;
+  /* position: absolute; */
+  /* bottom: 0px; */
+}
+.footer a {
+  color: white;
+  text-decoration : none;
+  margin:0px 20px;
+  bottom: 0px;
+  width: 100%;
+}
+.fengexian {
+  color: #CCDFCB;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right:10%;
+  margin-left: 10%;
+}
+.sponsoren {
+  width:20%;
+  max-height:initial;
+  margin:30px;
+  vertical-align: middle;
+  max-width: 200px;
+  min-width: 100px;
+}
+.contactus {
+  line-height: 1.6;
+  text-align: center;
+  background-color: #cc0234;
+  margin-right: -25px;
+  margin-left: -25px;
+}
+.contactus div {
+  height: 32px;
+}
+.contactus img {
+  height: 20px;
+}
+/* footer mobile */
+@media screen and (max-width: 800px) {
+  .sponsoren {
+    width:100%;
+    margin:12px 0;
+  }
+  .footer a {
+    margin: 5px;
+  }
+  .contactus a span {
+    display: none;
+  }
+}
+
+/* document styles */
+html, body {
+  height: 100%
+}
 body {
+  min-height: 100%;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: normal;
-  background: #eee;
-  line-height: 1.4rem;
 }
 h1,
 h2,
@@ -19,295 +163,274 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Chivo", "HelveticaNeue-Light", "Helvetica Neue Light",
-    "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #001a33;
 }
-h2 {
-  font-size: 2rem;
-  margin: 1rem 0;
+p {
+  line-height: 1.6;
 }
-:focus {
-  outline-color: transparent;
-  outline-style: none;
+::selection {
+  /* color: red; */
+  background: rgb(0, 149, 207);
 }
-h2 + p {
-  margin: 0 0 2rem 0;
+
+/* toc */
+.docs, .introduction{
+  font-size: 1.2em;
+  position: relative;
+  background-color:#FFFFFF;
+  /* box-shadow: 2px 2px 10px #919191; */
 }
-a {
+#introDiv, #main {
+  font-family: 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.toc-column {
+  height: 100%;
+  padding-left: 0;
+}
+.toc-wrapper{
+  position: sticky;
+  top:100px;
+  right: 0px;
+  margin-top:20px;
+  margin-bottom: 15px;
+  border-radius: 7px;
+  border: 1px solid black;
+  padding:3px;
+  background-color: #f8f9fa
+}
+.toc-wrapper a {
   text-decoration: none;
-  color: #007fff;
-  padding: 0 0 .2rem 0;
+}
+
+.toc-wrapper > li {
+  text-align: right;
+}
+#tableOfContent {
+  padding-left:0;
+}
+.toc-wrapper ul {
+  padding-left:12px;
+}
+/* top */
+.toc-wrapper > li > ul {
+  text-align: left;
+  font-size: 0.8em;
+}
+.toc-wrapper ul,
+.toc-wrapper li {
+  list-style: none;
+  margin:0;
+}
+.backToTop {
+  cursor: pointer;
+  margin-right:15px;
+}
+
+
+
+
+
+/* logbook accordion */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
   font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
-a:hover {
-  color: #007fff;
+
+.active:after {
+  content: "\2212";
 }
-pre {
-  overflow-x: auto;
-  padding: 1.25em;
-  margin: 1.6em 0;
-  font-size: .875em;
-  background: #fcfcfc;
-  white-space: pre;
-  word-wrap: normal;
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
-code {
-  color: #007fff;
-}
-.layout {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-.page {
-  z-index: 0;
-  background: #eee;
-}
-.wrap {
-  box-sizing: border-box;
+
+/* Human Practice Timeline */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
-.page-section {
-  padding-top: 3rem;
-  margin-bottom: 3rem;
-}
-.page-features {
-  width: 100%;
-  background: hsl(209, 100%, 10%);
-  overflow: scroll;
-}
-.hero {
-  box-sizing: border-box;
-  padding: 2rem;
-  background: #fff;
-  border: 1px solid #fff;
-  border-radius: 2px;
-}
-.hero-headline {
-  font-size: 3rem;
-  line-height: 3rem;
-  white-space: nowrap;
-  margin-bottom: .5rem;
-  margin-top: 1rem;
-}
-.hero-copy {
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding: 0 2rem;
-  text-align: center;
-}
-.link-top {
-  align-self: flex-end;
-}
-.button {
-  display: inline-block;
-  min-width: 9rem;
-  padding: .5rem 0;
-  margin: 0;
-  border: 2px solid #007fff;
-  border-radius: 3px;
-  color: #007fff;
-  font-size: 1rem;
-  line-height: 1.6;
-  background-color: transparent;
-  transition: background-color, 0.15s;
-}
-.button:hover {
-  background: #3399ff;
-  border-color: #3399ff;
-  color: #fff;
-  text-shadow: 0 1px #007fff;
-}
-.button:active {
-  background: #007fff;
-  color: #fff;
-  border-top: 2px solid #0066cc;
-}
-.box-row,
-.box-first,
-.box-nested,
-.box-large,
-.box {
-  box-sizing: border-box;
-  position: relative;
-  box-sizing: border-box;
-  min-height: 1.5rem;
-  padding: .25rem;
-  margin-bottom: 0;
-  background: #007fff;
-  border-radius: 2px;
-  overflow: hidden;
-  text-align: center;
-  color: white;
-}
-.box-row {
-  margin-bottom: 1rem;
-}
-.box-first {
-  background: #0066cc;
-  border-color: #007fff;
-}
-.box-nested {
-  background: #003366;
-  border-color: #007fff;
-}
-.box-large {
-  height: 8rem;
-}
-.box-container {
-  box-sizing: border-box;
-  padding: .5rem;
-}
-.page-footer {
-  box-sizing: border-box;
-  padding-bottom: 3rem;
-}
-.end {
-  text-align: end;
-}
-@media only screen and (min-width: 48rem) {
-  body {
-    font-size: 16px;
-  }
-  .hero-headline {
-    font-size: 6rem;
-    line-height: 6rem;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-  }
-  .hero-copy {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-  }
-  .button {
-    min-width: 11rem;
-    margin: .5rem 1rem;
-    font-size: 1.25rem;
-  }
-  .box-row,
-  .box-first,
-  .box-nested,
-  .box-large,
-  .box {
-    padding: 1rem;
-  }
-}
-/* Nav Bar */
-.navInsider
-{
-    height:100px;
-    float: left;
-    margin: 10px;
-    box-sizing: border-box;
-}
-.topContainer
-{
-    height:120px;
-    padding:5px
-}
-ul.child
-{
-    display: none;
-}
-ul.child li
-{
-    display: block;
-}
-li.sub
-{
-    display: inline-block;
-}
-li > a
-{
-    color: black;
-    text-decoration: none;
-}
-li
-{
-    list-style: none;
-}
-li.sub:hover {
-    border-radius: 20px 20px 0px 0px;
-    background-color: brown;
-}
-.mobileToggle
-{
-    display: none;
-    background-color:blueviolet;
-    text-align: right;
-    padding: 15px
-}
-@media (max-width: 768px)
-{
-    .mobileToggle
-    {
-        display: block;
-    }
-    ul
-    {
-        width: 100%;
-        display: none;
-    }
-    ul li
-    {
-        display: block;
-        text-align: center;
-    }
-    .showUp
-    {
-        display: block;
-    }
-}
-#mainContainer {  
-    width:80%;
-    max-width: 1020px;
-    margin:auto;
-    position:relative;
-    min-height:400px;
-    height:100%;
-    overflow-y: visible;
-    display:table;
-}
-#navContainer {
-    height: 100px;
-    display:table-header-group;
-}
-@media screen and (max-device-width:480px) {
-#navContainer {
-    height:314px;
-}
-#sideContainer {
-    margin-right:1%;
-    width:19%;
-    float:left;
-    display:table-cell;
-    position:absolute;
-    top:103px;
-    bottom:0px;
-/*    height:100%;*/
-/*    position:relative;*/
-/*    overflow:auto;*/
-}
-}
-@media screen and (max-width:1100px) {
-#sideContainer {
-    display:none;
-}
-.expContainer {
-    width:92%;
-}
-}
-@media print {
-#sideContainer {
-    display:none;
-}
-.expContainer {
-    width:92%;
-}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  background-color: rgb(100, 100, 100);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
 }
 
-/* </style>
-</html> */
+/* Container around content */
+.tl-event {
+  padding: 10px 40px;
+  position: relative;
+  background-color: greenyellow;
+  width: 50%;
+  border:1px;
+}
+
+/* The circles on the timeline */
+.tl-event::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid purple;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent purple;
+  /* box-sizing: content-box; */
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid purple;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent purple transparent transparent;
+  /* box-sizing: content-box; */
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -13px;
+}
+
+/* The actual content */
+.tl-content {
+  padding: 20px 30px;
+  background-color: purple;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .tl-event {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .tl-event::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+
+/* MISC Correction */
+#top_title{
+  display:none;
+}
+#globalWrapper{
+  font-size:100%;
+  padding-bottom: 0;
+  margin-bottom: -10px;
+}
+div#mw-content-text.mw-content-ltr {
+  background-image: url("http://2018.igem.org/wiki/images/e/e6/T--TU-Eindhoven--BGgraySpread150.png");
+  background-attachment: fixed;
+}
+body {
+  background-image: url("http://2018.igem.org/wiki/images/e/e6/T--TU-Eindhoven--BGgraySpread150.png");
+  background-attachment: fixed;
+}
+#content{
+  width:100%;
+  margin:0 auto;
+  padding:0px;
+}
+ul.normal-menu li
+{
+  list-style:none;
+}
+
+ul.nav.navbar-nav.navbar-right {
+  margin: 0;
+}
+#HQ_page p {
+  font-family: 'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}

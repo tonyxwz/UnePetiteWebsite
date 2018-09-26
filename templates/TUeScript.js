@@ -1,133 +1,61 @@
-/*<html>
-<script>*/
-var toc;
-var footer;
-
 $(document).ready(function(){
-    $('#mobile-btn').click(function(){
-        var display = $('.mobile-menu-list').css('display');
-        if(display == "none"){
-            $('.mobile-menu-list').css('display', 'flex');
-        }else{
-            $('.mobile-menu-list').css('display', 'none');
-        }
-    });
+  var offsetTop = 65;
+  // set container height so that "sticky" functions
+  $('.toc-column').height($('.docs').height());
 
-    $(window).resize(function(){
-        $('.mobile-menu-list').css('display', 'none');
-        setTOCWidth();
-        // setMenuWidth();
-    });
-    
-    $('li.sub').click(function(){
-        $(this).find('ul.child').toggle();
-        $(this).siblings().find('ul.child').hide();
-    });
-
-    toc = document.getElementById('toc-container');
-    footer = document.getElementById('footer-container');
-    // setMenuWidth();
-    window.addEventListener('scroll', onScrollHandler);
-    insertExplanation();
-    if (bGenerateCat)
-    {
-        catalogueGen();
+  $(window).resize(function(){
+    if ($(window).width() < 992) {
+      $('.toc-column').css("height", "100%");
+    } else {
+      $('.toc-column').height($('.docs').height());
     }
+  });
+  
+  // smooth scrolling
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - offsetTop
+    }, 300);
+  });
+
+  generateTOC({'id':'tableOfContent', 'src': '.docs section'});
 });
 
-function setMenuWidth(){
-    var width1 = $(".nav-bar").width();
-    var width2 = $(".logo-a").width();
-    console.log(width1);
-    console.log(width2);
-    var menus = $(".dropdown");
-    //console.log(menus);
-    var w = (width1 - width2 -100) / menus.length;
-    console.log(w);
-    $(".dropdown").width(w);
-    // $.each(menus, function(idx,val){
-    //     val.width(w);
-    // });
+function topFunction() {
+  $('html, body').animate({scrollTop: 0}, 300);
 }
 
-function catalogueGen(){
-    var sections = document.querySelectorAll("div#docContent div.sect");
-    htmlList = ["<ul>\n"];
-    for(var i =0;i<sections.length;i++){
-        sect = sections[i];
+function generateTOC(options){
+  var sections = document.querySelectorAll(options['src']);
+  var liList = new Array();
+  for (var i = 0; i<sections.length;i++) {
+    var s = sections[i];
+    var h2 = s.querySelector('h2');
+    var id = idFromTxt(h2,i);
+    liList.push("<li><a href=\"#"+ id +"\">"+ h2.innerHTML +"</a><ul>");
 
-        // select h2 within section
-        var h2 = sect.querySelector('h2');
-        h2txt = h2.innerHTML;
-        h2id = idFromTxt(h2txt,h2);
-        htmlList.push("<li>\n");
-        htmlList.push("<a href=#"+h2id+">"+h2txt+"</a>\n");
-
-        // select h3s
-        htmlList.push("<ul>\n");
-        h3s = sect.querySelectorAll('h3');
-        for(var j = 0;j<h3s.length;j++){
-            var h3 = h3s[j];
-            h3txt = h3.innerHTML;
-            h3id = idFromTxt(h3txt,h3);
-            htmlList.push("<li><a href=#"+h3id+">"+h3txt+"</a></li>");
-        }
-        htmlList.push("</ul>\n");
-        htmlList.push("</li>\n");
-    }
-    htmlList.push("</ul>\n");
-    
-    // set width of toc
-    setTOCWidth();
-    $("#toc-container").html(htmlList.join(""));
-    $('#toc-container').toggle();
+    var h3s = s.querySelectorAll('h3');
+    for (var j = 0; j < h3s.length; j++) {
+      var h3 = h3s[j];
+      var id = idFromTxt(h3, j);
+      liList.push("<li><a href=\"#"+ id +"\">"+ h3.innerHTML +"</a></li>")
+    } 
+    liList.push("</ul></li>");
+  }
+  liList.push("</ul>\n");
+  document.getElementById(options['id']).innerHTML = liList.join("");
 }
 
-function setTOCWidth(){
-    var divtoc = document.querySelector("#toc-container");
-    divtoc.style.width = (divtoc.parentNode.clientWidth - 10).toString() + 'px';
+// test ?,! etc
+function idFromTxt(el, n){
+  var elid = el.innerHTML.replace(/[^\w]/g, '') + n;
+  el.id = elid;
+  return elid;
 }
 
-function idFromTxt(txt,el){
-    var elid = txt.replace(/\s+/g, '');
-    el.id = elid;
-    return elid;
-}
+// extend jQuery
+(function($){
 
-// make toc smooth with scrolling
-function onScrollHandler(){
-    var maxScroll = document.documentElement.offsetHeight -
-        toc.offsetHeight - footer.offsetHeight - 100;
-    var currentScroll = document.scrollingElement.scrollTop;
-
-    
-    if (currentScroll >= maxScroll) {
-        toc.classList.add('abs-toc');
-        toc.classList.remove('fixed-toc');
-    } else {
-        toc.classList.add('fixed-toc');
-        toc.classList.remove('abs-toc');
-    }
-}
-
-function insertExplanation(){
-    // insert click-to-elaborate events
-    var sp = document.getElementsByClassName("klk2elaborate");
-    var i;
-
-    for(i=0;i<sp.length;i++){
-        sp[i].addEventListener('click', onElaborateHandler);
-        console.log(sp[i]);
-    }
-}
-
-function onElaborateHandler(e){
-    if (this.parentNode.nextElementSibling.style.display === "block") {
-        this.parentNode.nextElementSibling.style.display = "none";
-    } else {
-        this.parentNode.nextElementSibling.style.display = "block";
-    }
-    
-}
-/*</script>
-</html>*/
+}(jQuery));
