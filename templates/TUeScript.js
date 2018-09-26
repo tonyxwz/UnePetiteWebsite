@@ -21,6 +21,8 @@ $(document).ready(function(){
   });
 
   generateTOC({'id':'tableOfContent', 'src': '.docs section'});
+  // load json, pass to insertExplanation()
+  insertExplanation();
 });
 
 function topFunction() {
@@ -53,6 +55,20 @@ function idFromTxt(el, n){
   var elid = el.innerHTML.replace(/[^\w]/g, '') + n;
   el.id = elid;
   return elid;
+}
+
+function insertExplanation(exp){
+  // insert click-to-elaborate events
+  var sp = document.getElementsByClassName("klk2elaborate");
+  var i;
+
+  for(i=0;i<sp.length;i++){
+      sp[i].addEventListener('click', function(){
+        var id = this.textContent.replace(/[^\w]/g, '');
+        var bq = document.getElementById(id);
+        bq.classList.toggle('disappear')
+      });
+  }
 }
 
 // extend jQuery
