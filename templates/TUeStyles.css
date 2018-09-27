@@ -35,7 +35,7 @@ p {
 	font-size: 16px;
 }
 .jumbotron {
-	background: #27A967;
+	/* background-image: #27A967; */
 	text-align: center;
 }
 .jumbotron p {
@@ -282,13 +282,19 @@ img.figure {
 #tableOfContent {
   padding-left:0;
 }
+#tableOfContent > li {
+  margin: 10px 0px;
+}
+#tableOfContent > li > a {
+  color: rgb(0, 57, 133);
+}
 .toc-wrapper ul {
   padding-left:12px;
 }
 /* top */
 .toc-wrapper > li > ul {
   text-align: left;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 .toc-wrapper ul,
 .toc-wrapper li {
@@ -319,7 +325,7 @@ img.figure {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+button.active, .accordion:hover {
   background-color: #ccc;
 }
 
@@ -331,7 +337,7 @@ img.figure {
   margin-left: 5px;
 }
 
-.active:after {
+button.active:after {
   content: "\2212";
 }
 
