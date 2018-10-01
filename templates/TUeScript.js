@@ -47,7 +47,10 @@ function generateTOC(options){
     liList.push("</ul></li>");
   }
   liList.push("</ul>\n");
-  document.getElementById(options['id']).innerHTML = liList.join("");
+  var toc = document.getElementById(options['id']);
+  if (toc){
+    toc.innerHTML = liList.join("");
+  }
 }
 
 // test ?,! etc

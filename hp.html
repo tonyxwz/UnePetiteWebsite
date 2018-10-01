@@ -20,6 +20,11 @@
             text-align: center;
             padding:40px;
         }
+        .container-fluid {
+            background-image: linear-gradient(to bottom right,
+          rgba(57, 44, 172, 0.801), rgba(126, 0, 151, 0.521));
+          margin-bottom: 0;
+        }
     </style>
      <script>
     </script>
@@ -122,13 +127,14 @@
             <br>
         </div>
     </div>
+    <div class="container-fluid">
     <div class="container hp-content" id="hp-container">
     <div class="placeholder">
         <h1>1. FINDING A PROJECT</h1>
     </div>
     <div class="timeline">
         <div class="tl-event left">
-        <div class="tl-content">
+        <div class="tl-content docs">
             <h2>February & March </h2>
             <p>Initially, we considered a wide range of topics, from glucose sensors to
                 solar energy, and from ocean clean-ups to artificial organs. The number
@@ -146,6 +152,59 @@
                 meetings, we settled on this challenging subject as the goal of our
                 2018 iGEM project!
             </p>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
+                Read More
+            </button>
+
+            <!-- Modal -->
+            <div id="myModal1" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">February & March</h4>
+                        </div>
+                        <div class="modal-body docs">
+                            <p>Initially, we considered a wide range of topics, from glucose sensors to
+                                solar energy, and from ocean clean-ups to artificial organs. The number
+                                of options seemed unlimited, and our search was scattered. As a source of
+                                inspiration, we consulted newspaper articles, checked the wiki pages of
+                                previous iGEM teams and talked to several professors at our university.
+                                When going through the wiki pages of previous teams, we realized that
+                                many of them  struggled with the use of their creations outside of the
+                                laboratory. We also came across an article by Liu et al. (2017), who
+                                attempted to design a ‘living material’ by means of several layers used
+                                to entrap bacteria. Inspired by this cool work, we decided we wanted to
+                                do something similar in order to facilitate the easy use of GMOs.
+                                However, instead of using several layers for entrapment, we wanted to
+                                equip our bacteria with their own anchor. After several brainstorm
+                                meetings, we settled on this challenging subject as the goal of our
+                                2018 iGEM project!
+                            </p>
+                            <div class="figureWrapper figureMiddle">
+                                <div class="figureFrame">
+                                    <a href=""><img class="figure" src="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/450px-T--WPI_Worcester--goat3.png"></a>
+                                    <div class="figureCaption">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                            has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                            printer took a galley of type.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
         </div>
         <div class="tl-event right">
@@ -179,46 +238,6 @@
         </div>
         </div>
     </div>
-    <div class="placeholder">
-        <h1>2. FINDING AN APPLICATION</h1>
-    </div>
-    <div class="timeline">
-        <div class="tl-event left">
-        <div class="tl-content">
-            <h2>2017</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        </div>
-        <div class="tl-event right">
-        <div class="tl-content">
-            <h2>2016</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        </div>
-        <div class="tl-event left">
-        <div class="tl-content">
-            <h2>2015</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        </div>
-        <div class="tl-event right">
-        <div class="tl-content">
-            <h2>2012</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        </div>
-        <div class="tl-event left">
-        <div class="tl-content">
-            <h2>2011</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        </div>
-        <div class="tl-event right">
-        <div class="tl-content">
-            <h2>2007</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-        </div>
-        </div>
     </div>
     </div>
     <div class="container footer" id="footer-container">
@@ -266,7 +285,10 @@
         
       </div>
     </div>
+    <script>
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://2018.igem.org/Team:TU-Eindhoven/bootstrap_js?action=raw&ctype=text/javascript"></script>
+    <script src="templates/TUeScript.js"></script>
   </body>
 </html>

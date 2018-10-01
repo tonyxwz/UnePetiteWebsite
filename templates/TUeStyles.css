@@ -74,26 +74,16 @@ p {
   ); */
 
   /* mozilla example - FF3.6+ */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     rgba(255, 255, 255, 0), rgba(255, 255, 255, 1.0)
-  );
+  ); */
+  background-color:white;
 
-  /* IE 5.5 - 7 */
-  filter: progid:DXImageTransform.Microsoft.gradient(
-    gradientType=1, startColor=0, endColorStr=#FFFFFF
-  );
-
-  /* IE8 uses -ms-filter for whatever reason... */
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(
-    gradientType=1, startColor=0, endColoStr=#FFFFFF
-  );
-  margin-top:7px;
+  /* margin-top:7px; */
   padding:25px;
   padding-bottom: 0px;
   text-align: center;
   width: 100%;
-  /* position: absolute; */
-  /* bottom: 0px; */
 }
 .footer a {
   color: white;
@@ -361,7 +351,7 @@ button.active:after {
 .timeline::after {
   content: '';
   position: absolute;
-  width: 7px;
+  width: 6px;
   background-color: rgb(100, 100, 100);
   top: 0;
   bottom: 0;
@@ -373,7 +363,7 @@ button.active:after {
 .tl-event {
   padding: 10px 40px;
   position: relative;
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   width: 50%;
   border:1px;
 }
@@ -411,9 +401,9 @@ button.active:after {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid purple;
+  border: medium solid white;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent purple;
+  border-color: transparent transparent transparent white;
   /* box-sizing: content-box; */
 }
 
@@ -426,9 +416,9 @@ button.active:after {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid purple;
+  border: medium solid white;
   border-width: 10px 10px 10px 0;
-  border-color: transparent purple transparent transparent;
+  border-color: transparent white transparent transparent;
   /* box-sizing: content-box; */
 }
 
@@ -440,9 +430,22 @@ button.active:after {
 /* The actual content */
 .tl-content {
   padding: 20px 30px;
-  background-color: purple;
+  background-color: white;
   position: relative;
   border-radius: 6px;
+}
+
+/* modal window */
+/* button.readmore {
+  border-radius: 10%;
+} */
+.tl-content button {
+  left:0;
+}
+@media screen and (min-width:768px) {
+  .modal-dialog {
+    width:60%;
+  }
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
