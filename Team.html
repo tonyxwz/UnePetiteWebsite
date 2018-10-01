@@ -42,7 +42,9 @@
           margin: 5%;
         }
       }
-
+      .foto img {
+        border-radius: 35%;
+      }
       /* slides */
       .slideshow-container {
         max-width: 800px;
@@ -146,6 +148,19 @@
         background-image: linear-gradient(to bottom right,
           rgba(57, 44, 172, 0.801), rgba(126, 0, 151, 0.521));
       }
+      /* change images with fade effect */
+      .swapImage img {
+        -webkit-transition: all 0.1s ease-in-out; 
+        -moz-transition: all 0.1s ease-in-out; 
+        -ms-transition: all 0.1s ease-in-out; 
+        -o-transition: all 0.1s ease-in-out; 
+        transition: all 0.1s ease-in-out;
+      }
+      .foto img {
+        width:100%;
+      }
+      
+
     </style>
   </head>
   <body>
@@ -442,71 +457,74 @@
         </div>
         <div class="col-lg-1"></div>
       </div>
-      <div class="row" style="background-color:green;">
-        <div class='supervisors'>
-          <div class='col-xs-4 col-md-3'>
-            <div class="foto">
-              <img src="images/playwith/heads/rest.png" id="Maarten"/>
+      <div class="row advisorRow" style="background-color:green;">
+        <div class="col-lg-2 supervisors"></div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class='col-xs-4'>
+              <div class="foto">
+                <img src="/images/Team/supervisors/maarten.merkx.jpg" id="Maarten"/>
+              </div>
+              <div class='bio'>
+                <h1>Maarten</h1>
+                <p>
+                </p>
+              </div>
             </div>
-            <div class='bio'>
-              <h1>Maarten</h1>
-              <p>
-              </p>
+  
+            <div class='col-xs-4'>
+              <div class="foto">
+                <img src="/images/Team/supervisors/tom.de.greef.jpg" id="Maarten"/>
+              </div>
+              <div class='bio'>
+                <h1>Tom</h1>
+                <p>
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class='supervisors'>
-          <div class='col-xs-4 col-md-3'>
-            <div class="foto">
-              <img src="images/playwith/heads/rest.png" id="Tom"/>
-            </div>
-            <div class='bio'>
-              <h1>Tom</h1>
-              <p>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class='supervisors'>
-          <div class='col-xs-4 col-md-3'>
-            <div class="foto">
-              <img src="images/playwith/heads/rest.png" id="Luc"/>
-            </div>
-            <div class='bio'>
-              <h1>Luc</h1>
-              <p>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class='supervisors'>
-          <div class='col-xs-4 col-md-3'>
-            <div class="foto">
-              <img src="images/playwith/heads/rest.png" id="Phil"/>
-            </div>
-            <div class='bio'>
-              <h1>Phil</h1>
-              <p>
-              </p>
+  
+            <div class='col-xs-4'>
+              <div class="foto">
+                <img src="/images/Team/supervisors/luc.brunsveld.jpg" id="Maarten"/>
+              </div>
+              <div class='bio'>
+                <h1>Luc</h1>
+                <p>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class='supervisors'>
-          <div class='col-xs-4 col-md-3'>
-            <div class="foto">
-              <img src="images/playwith/heads/rest.png" id="Emilien"/>
+        <div class="col-lg-2"></div>
+      </div>
+      <div class="row advisorRow" style="background-color:yellowgreen;">
+        <div class="col-lg-2 supervisors"></div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class='col-xs-6'>
+              <div class="foto">
+                <img src="/images/Team/supervisors/maarten.merkx.jpg" id="Maarten"/>
+              </div>
+              <div class='bio'>
+                <h1>Maarten</h1>
+                <p>
+                </p>
+              </div>
             </div>
-            <div class='bio'>
-              <h1>Emilien</h1>
-              <p>
-              </p>
+  
+            <div class='col-xs-6'>
+              <div class="foto">
+                <img src="/images/Team/supervisors/tom.de.greef.jpg" id="Maarten"/>
+              </div>
+              <div class='bio'>
+                <h1>Tom</h1>
+                <p>
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-lg-2"></div>
       </div>
     </div>
 
@@ -566,15 +584,15 @@
         'fullname':'Guido Oerlemans',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -582,15 +600,15 @@
         'fullname':'Maxime van den Oetelaar',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -598,15 +616,15 @@
         'fullname':'Mariska Brüls',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -614,15 +632,15 @@
         'fullname':'Mick Vergahen',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -630,15 +648,15 @@
         'fullname':'Sander Keij',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -646,15 +664,15 @@
         'fullname':'Tim van der Hek',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -662,15 +680,15 @@
         'fullname':'Bruno Eijkens',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -678,15 +696,15 @@
         'fullname':'Laura van Hazendonk',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -694,15 +712,15 @@
         'fullname':'Pim Joostens',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -710,15 +728,15 @@
         'fullname':'Simone Twisk',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -726,15 +744,15 @@
         'fullname':'Yahav Rave',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
@@ -742,15 +760,15 @@
         'fullname':'Weizhou Xing',
         'text':'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         'urls':[
-          'images/playwith/heads/1.png',
-          'images/playwith/heads/2.png',
-          'images/playwith/heads/3.png',
-          'images/playwith/heads/4.png',
-          'images/playwith/heads/5.png',
-          'images/playwith/heads/6.png',
-          'images/playwith/heads/7.png',
-          'images/playwith/heads/8.png',
-          'images/playwith/heads/9.png'
+          'http://2018.igem.org/wiki/images/c/c5/T--TU-Eindhoven--Guido1.png',
+          'http://2018.igem.org/wiki/images/9/95/T--TU-Eindhoven--Guido2.png',
+          'http://2018.igem.org/wiki/images/7/74/T--TU-Eindhoven--Guido3.png',
+          'http://2018.igem.org/wiki/images/6/6c/T--TU-Eindhoven--Guido4.png',
+          'http://2018.igem.org/wiki/images/5/5b/T--TU-Eindhoven--Guido5.png',
+          'http://2018.igem.org/wiki/images/f/fa/T--TU-Eindhoven--Guido6.png',
+          'http://2018.igem.org/wiki/images/9/9c/T--TU-Eindhoven--Guido7.png',
+          'http://2018.igem.org/wiki/images/6/68/T--TU-Eindhoven--Guido8.png',
+          'http://2018.igem.org/wiki/images/5/5f/T--TU-Eindhoven--Guido9.png'
         ],
         'mooi':'images/playwith/heads/rest.png'
       },
