@@ -35,8 +35,8 @@ p {
 	font-size: 16px;
 }
 .jumbotron {
-	/* background-image: #27A967; */
-	text-align: center;
+  text-align: center;
+  /* background-color: #FFF444; */
 }
 .jumbotron p {
 	font-size: 20px;
@@ -252,6 +252,7 @@ img.figure {
 
 .figure:hover {opacity: 0.7;}
 
+
 /* The Modal (background) */
 .figureModalWindow {
   display: none; /* Hidden by default */
@@ -300,7 +301,7 @@ img.figure {
 }
 
 /* The Close Button */
-.closeModal {
+.closeFigure {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -310,8 +311,8 @@ img.figure {
   transition: 0.3s;
 }
 
-.closeModal:hover,
-.closeModal:focus {
+.closeFigure:hover,
+.closeFigure:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -488,9 +489,9 @@ button.active:after {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
+  border: medium solid #eee;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #eee;
   /* box-sizing: content-box; */
 }
 
@@ -503,9 +504,9 @@ button.active:after {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid #eee;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent #eee transparent transparent;
   /* box-sizing: content-box; */
 }
 
@@ -517,7 +518,7 @@ button.active:after {
 /* The actual content */
 .tl-content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: #eee;
   position: relative;
   border-radius: 6px;
 }
@@ -526,9 +527,10 @@ button.active:after {
 /* button.readmore {
   border-radius: 10%;
 } */
-.tl-content button {
+
+/* .tl-content button {
   left:0;
-}
+} */
 @media screen and (min-width:768px) {
   .modal-dialog {
     width:60%;
@@ -565,6 +567,103 @@ button.active:after {
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
+  }
+}
+/* The Modal (background) */
+.myModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.myModal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 6px;
+}
+@-webkit-keyframes animatetop {
+  from {top:-600px; opacity:0} 
+  to {top:0; opacity:1}
+}
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -600px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+/* The Close Button */
+.closeModal {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+  margin-top: -2px;
+  
+  float: right;
+  /* font-size: 21px; */
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.myModal-header {
+  padding: 2px 16px;
+  color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.myModal-body {
+  padding: 2px 16px;
+}
+
+.myModal-footer {
+  padding: 2px 16px;
+  color: white;
+  border-top: 1px solid #e5e5e5;
+}
+@media screen and (min-width:768px) {
+  .myModal-content{
+    width: 60%;
+  }
+}
+@media screen and (max-width:767px) {
+  .myModal {
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:5px;
+    padding-right:5px;
   }
 }
 

@@ -103,12 +103,34 @@ function openFigureModal(e){
 
   var html = document.querySelector('html');
   html.style.overflow = 'hidden';
-  var closeBtn = modal.querySelector('.closeModal');
+  var closeBtn = modal.querySelector('.closeFigure');
   closeBtn.onclick = function(){
     modal.style.display = 'none';
     html.style.overflow = 'auto';
   }
+}
 
+function openModal(e){
+  var targetID = e.getAttribute('data-target');
+  console.log(targetID);
+  var modal = document.querySelector(targetID);
+  if (modal != null){
+    modal.style.display = "block";
+
+    var html = document.querySelector('html');
+    html.style.overflow = 'hidden';
+
+    var closeBtn = modal.querySelector('.closeModal');
+    closeBtn.addEventListener('click', function(){
+      modal.style.display = 'none';
+      html.style.overflow = 'auto';
+    });
+    window.addEventListener('click', function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
 }
 
 // extend jQuery
