@@ -89,6 +89,25 @@ function insertExplanation(exp){
   }
 }
 
+function openFigureModal(e){
+  // console.log(e);
+  var hdurl = e.querySelector('img').getAttribute('data-hdurl');
+  var modal = document.getElementById('imageModal');
+  modal.style.display = "block";
+
+  var img = modal.querySelector('img');
+  img.src = hdurl;
+
+  var html = document.querySelector('html');
+  html.style.overflow = 'hidden';
+  var closeBtn = modal.querySelector('.closeModal');
+  closeBtn.onclick = function(){
+    modal.style.display = 'none';
+    html.style.overflow = 'auto';
+  }
+
+}
+
 // extend jQuery
 (function($){
 
