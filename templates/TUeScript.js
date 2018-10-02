@@ -92,6 +92,9 @@ function insertExplanation(exp){
 function openFigureModal(e){
   // console.log(e);
   var hdurl = e.querySelector('img').getAttribute('data-hdurl');
+  if (!hdurl) {
+    hdurl = e.querySelector('img').src;
+  }
   var modal = document.getElementById('imageModal');
   modal.style.display = "block";
 
