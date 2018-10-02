@@ -2,7 +2,7 @@ $(document).ready(function(){
   var offsetTop = 65;
   // set container height so that "sticky" functions
   $('.toc-column').height($('.docs').height());
-
+  
   $(window).resize(function(){
     if ($(window).width() < 992) {
       $('.toc-column').css("height", "100%");
@@ -10,6 +10,7 @@ $(document).ready(function(){
       $('.toc-column').height($('.docs').height());
     }
   });
+  $(window).scroll(setTOCColumn);
   
   // smooth scrolling
   $(document).on('click', 'a[href^="#"]', function (event) {
@@ -24,6 +25,20 @@ $(document).ready(function(){
   // load json, pass to insertExplanation()
   insertExplanation();
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+  setTOCColumn();
+});
+
+function setTOCColumn(){
+  if ($(window).width() < 992) {
+    $('.toc-column').css("height", "100%");
+  } else {
+    $('.toc-column').height($('.docs').height());
+    // console.log($('.toc-column').height());
+    // console.log($('.docs').height());
+  }
+}
 
 function topFunction() {
   $('html, body').animate({scrollTop: 0}, 300);
