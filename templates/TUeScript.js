@@ -128,6 +128,7 @@ function openModal(e){
     window.addEventListener('click', function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
+        html.style.overflow = 'auto';
       }
     });
   }
