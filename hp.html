@@ -15,11 +15,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        .placeholder {
-            /* background-color: aqua; */
-            text-align: center;
-            padding:14px;
-        }
     </style>
   </head>
   <body>
@@ -98,8 +93,8 @@
     <div class="jumbotron neat">
         <div class="container">
             <h1>Introduction</h1>
-            <p>From the beginning, the Human Practices took a central role in shaping our pro
-                ject. When we started our brainstorm sessions in March, we had no clue which
+            <p>From the beginning, the Human Practices took a central role in shaping our
+                project. When we started our brainstorm sessions in March, we had no clue which
                 topic we wanted to explore. Yet, we wanted it to be relevant to society.
                 During these first months, we got the opportunity to interact with experts
                 and the public to discuss our ideas. These encounters were of great help in
@@ -119,10 +114,28 @@
                 finding an application  and shaping the design.
             </p>
             <br>
+            <div class="hp-tabs" id="hpTop">
+                <!-- <ul>
+                    <li><button href="#intergrated-container" onclick="changeHPTabs(this)">Intergrated Human Practice</button></li>
+                    <li><button href="#ethics-container" onclick="changeHPTabs(this)">Ethics</button></li>
+                    <li><button href="#safe-container" onclick="changeHPTabs(this)">Safe by design</button></li>
+                    <li><button href="#stakeholder-container" onclick="changeHPTabs(this)">Stakeholder-value analysis</button></li>
+                    <li><a href="#ethics-container" onclick="changeHPTabs(this)">Ethics</a></li>
+                    <li><a href="#safe-container" onclick="changeHPTabs(this)">Safe by design</a></li>
+                    <li><a href="#stakeholder-container" onclick="changeHPTabs(this)">Stakeholder-value analysis</a></li>
+                </ul> -->
+                <div class="btn-group" role="group" aria-label="hp-tabs">
+                    <button type="button" class="int-btn activeBtn btn btn-default" onclick="changeHPTabs(this)" data-target="#intergrated-container">Intergrated Human Practice</button>
+                    <button type="button" class="eth-btn btn btn-default" onclick="changeHPTabs(this)" data-target="#ethics-container">Ethics</button>
+                    <button type="button" class="saf-btn btn btn-default" onclick="changeHPTabs(this)" data-target="#safe-container">Safe by design</button>
+                    <button type="button" class="sta-btn btn btn-default" onclick="changeHPTabs(this)" data-target="#stakeholder-container">Stakeholder-value analysis</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container-fluid main-wrapper">
-    <div class="container hp-content" id="hp-container">
+
+    <div class="container integrated-content activeTab" id="intergrated-container">
     <div class="placeholder">
         <h1>1. FINDING A PROJECT</h1>
     </div>
@@ -228,6 +241,375 @@
         </div>
     </div>
     </div>
+    <div id="ethics-container" class="container ethics-content round white">
+        <div class="row">
+            <div id="introDiv" class="col-xs-12 introduction">
+                <h1 style="text-align: center;">Ethics</h1>
+                <p>From the beginning, the Human Practices took a central role in shaping our 
+                    project. When we started our brainstorm sessions in March, we had no clue which
+                    topic we wanted to explore. Yet, we wanted it to be relevant to society.
+                    During these first months, we got the opportunity to interact with experts
+                    and the public to discuss our ideas. These encounters were of great help in
+                    our topic selection. During a visit to the Dutch Institute for Public Health
+                    and the Environment (RIVM) and the Rathenau Instituut (Dutch organization for
+                    technology assessment), we realized that the lack of a safe platform for
+                    working with GMOs outside of controlled environments is a problem on itself
+                    that deserves a solution. We were excited to tackle this issue with
+                    Gelcatraz, but also wanted to work towards a more concrete application. In
+                    the time that followed, we consulted several experts and interacted with the
+                    public to get feedback on our proposals. Once we had settled on the wound
+                    healing application, we interacted with more stakeholders and experts to
+                    shape the design of the wound healing patch. We realize that our project
+                    would not have been the same without the Human Practices. In the following
+                    section, we share the insights we gained from interactions with stakeholders
+                    and experts during the three main stages of the project: finding a project,
+                    finding an application  and shaping the design .
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-xl-2 toc-column">
+                <div class="toc-wrapper">
+                    <hr>
+                    <li>
+                        <ul id="tableOfContent">
+                            <p>The best that most of us can hope to achieve in physics is simply to misunderstand at a deeper level.</p>
+                        </ul>
+                        <a class="backToTop" href="#hpTop">▲</a>
+                    </li>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-8 docs">
+                <section>
+                    <h2>What is Ipsum</h2>
+                    <div class="figureWrapper figureRight">
+                        <div class="figureFrame">
+                            <a class="figureModal" onclick="openFigureModal(this)">
+                                <img class="figure" data-hdurl="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/450px-T--WPI_Worcester--goat3.png"
+                                src="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/180px-T--WPI_Worcester--goat3.png">
+                            </a>
+                            <div class="figureCaption">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zhenshierhie</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zhesheneme</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+                <section>
+                    <h2>W is Lorem Ipsum</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zenemehie</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                        publishing software like <span class="klk2elaborate">Aldus PageMaker</span> including
+                        versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                        since the 1500s, when an unknown printer took a galley.
+                    </p>
+                    <blockquote class="explanation disappear" id="AldusPageMaker">
+                        <h4>Aldus PageMaker</h4>
+                        <p>
+                            Now is Adobe InDesign - The next page in layout design.
+                            The industry-leading page design and layout app lets you create, preflight, and publish beautiful documents for print and digital media. InDesign CC has everything you need to make posters, books, digital magazines, eBooks, interactive PDFs, and more.
+                        </p>
+                                            </blockquote>
+
+                    <h3>zishenhie</h3>
+                    <div class="figureWrapper figureMiddle">
+                        <div class="figureFrame">
+                            <a class="figureModal" onclick="openFigureModal(this)">
+                                <img class="figure" src="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/450px-T--WPI_Worcester--goat3.png">
+                            </a>
+                            <div class="figureCaption">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zshenemenshe</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+                <section>
+                    <h2>What Lorem Ipsum?</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>neshierhe</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zhimeee</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-2 placeholder"></div>
+        </div>
+    </div>
+    <div id="safe-container" class="container safe-content round white">
+        <div class="row">
+            <div id="introDiv" class="col-xs-12 introduction">
+                <h1 style="text-align: center;">Safe by Design</h1>
+                <p>From the beginning, the Human Practices took a central role in shaping our 
+                    project. When we started our brainstorm sessions in March, we had no clue which
+                    topic we wanted to explore. Yet, we wanted it to be relevant to society.
+                    During these first months, we got the opportunity to interact with experts
+                    and the public to discuss our ideas. These encounters were of great help in
+                    our topic selection. During a visit to the Dutch Institute for Public Health
+                    and the Environment (RIVM) and the Rathenau Instituut (Dutch organization for
+                    technology assessment), we realized that the lack of a safe platform for
+                    working with GMOs outside of controlled environments is a problem on itself
+                    that deserves a solution. We were excited to tackle this issue with
+                    Gelcatraz, but also wanted to work towards a more concrete application. In
+                    the time that followed, we consulted several experts and interacted with the
+                    public to get feedback on our proposals. Once we had settled on the wound
+                    healing application, we interacted with more stakeholders and experts to
+                    shape the design of the wound healing patch. We realize that our project
+                    would not have been the same without the Human Practices. In the following
+                    section, we share the insights we gained from interactions with stakeholders
+                    and experts during the three main stages of the project: finding a project,
+                    finding an application  and shaping the design .
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-xl-2 toc-column">
+                <div class="toc-wrapper">
+                    <hr>
+                    <li>
+                        <ul id="tableOfContent">
+                            <p>The best that most of us can hope to achieve in physics is simply to misunderstand at a deeper level.</p>
+                        </ul>
+                        <a class="backToTop" href="#hpTop">▲</a>
+                    </li>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-8 docs">
+                <section>
+                    <h2>What is Lorem Ipsum</h2>
+                    <div class="figureWrapper figureRight">
+                        <div class="figureFrame">
+                            <a class="figureModal" onclick="openFigureModal(this)">
+                                <img class="figure" data-hdurl="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/450px-T--WPI_Worcester--goat3.png"
+                                src="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/180px-T--WPI_Worcester--goat3.png">
+                            </a>
+                            <div class="figureCaption">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zheshemenshierhie</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zheshenemerhie</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+                <section>
+                    <h2>What is Lorem Ipsum</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zhhishenemehie</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                        publishing software like <span class="klk2elaborate">Aldus PageMaker</span> including
+                        versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                        since the 1500s, when an unknown printer took a galley.
+                    </p>
+                    <blockquote class="explanation disappear" id="AldusPageMaker">
+                        <h4>Aldus PageMaker</h4>
+                        <p>
+                            Now is Adobe InDesign - The next page in layout design.
+                            The industry-leading page design and layout app lets you create, preflight, and publish beautiful documents for print and digital media. InDesign CC has everything you need to make posters, books, digital magazines, eBooks, interactive PDFs, and more.
+                        </p>
+                                            </blockquote>
+
+                    <h3>zishenemenshie</h3>
+                    <div class="figureWrapper figureMiddle">
+                        <div class="figureFrame">
+                            <a class="figureModal" onclick="openFigureModal(this)">
+                                <img class="figure" src="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/450px-T--WPI_Worcester--goat3.png">
+                            </a>
+                            <div class="figureCaption">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zshenemenshe</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+                <section>
+                    <h2>What is Lorem Ipsum?</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zhisheneshierhe</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zheimeee</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-2 placeholder"></div>
+        </div>
+    </div>
+    <div id="stakeholder-container" class="container stakeholder-content round white">
+        <div class="row">
+            <div id="introDiv" class="col-xs-12 introduction">
+                <h1 style="text-align: center;">Stakeholder-value analysis</h1>
+                <p>From the beginning, the Human Practices took a central role in shaping our 
+                    project. When we started our brainstorm sessions in March, we had no clue which
+                    topic we wanted to explore. Yet, we wanted it to be relevant to society.
+                    During these first months, we got the opportunity to interact with experts
+                    and the public to discuss our ideas. These encounters were of great help in
+                    our topic selection. During a visit to the Dutch Institute for Public Health
+                    and the Environment (RIVM) and the Rathenau Instituut (Dutch organization for
+                    technology assessment), we realized that the lack of a safe platform for
+                    working with GMOs outside of controlled environments is a problem on itself
+                    that deserves a solution. We were excited to tackle this issue with
+                    Gelcatraz, but also wanted to work towards a more concrete application. In
+                    the time that followed, we consulted several experts and interacted with the
+                    public to get feedback on our proposals. Once we had settled on the wound
+                    healing application, we interacted with more stakeholders and experts to
+                    shape the design of the wound healing patch. We realize that our project
+                    would not have been the same without the Human Practices. In the following
+                    section, we share the insights we gained from interactions with stakeholders
+                    and experts during the three main stages of the project: finding a project,
+                    finding an application  and shaping the design .
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-xl-2 toc-column">
+                <div class="toc-wrapper">
+                    <hr>
+                    <li>
+                        <ul id="tableOfContent">
+                            <p>The best that most of us can hope to achieve in physics is simply to misunderstand at a deeper level.</p>
+                        </ul>
+                        <a class="backToTop" href="#hpTop">▲</a>
+                    </li>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-8 docs">
+                <section>
+                    <h2>What is Lore psum</h2>
+                    <div class="figureWrapper figureRight">
+                        <div class="figureFrame">
+                            <a class="figureModal" onclick="openFigureModal(this)">
+                                <img class="figure" data-hdurl="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/450px-T--WPI_Worcester--goat3.png"
+                                src="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/180px-T--WPI_Worcester--goat3.png">
+                            </a>
+                            <div class="figureCaption">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>hshmeshirhi</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zehnmi sdsd</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+                <section>
+                    <h2>What is Lorem Ipsum</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zhhisheneme ssfe hie</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                        publishing software like <span class="klk2elaborate">Aldus PageMaker</span> including
+                        versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                        since the 1500s, when an unknown printer took a galley.
+                    </p>
+                    <blockquote class="explanation disappear" id="AldusPageMaker">
+                        <h4>Aldus PageMaker</h4>
+                        <p>
+                            Now is Adobe InDesign - The next page in layout design.
+                            The industry-leading page design and layout app lets you create, preflight, and publish beautiful documents for print and digital media. InDesign CC has everything you need to make posters, books, digital magazines, eBooks, interactive PDFs, and more.
+                        </p>
+                    </blockquote>
+
+                    <h3>zs fghe rer nre</h3>
+                    <div class="figureWrapper figureMiddle">
+                        <div class="figureFrame">
+                            <a class="figureModal" onclick="openFigureModal(this)">
+                                <img class="figure" src="http://2018.igem.org/wiki/images/thumb/2/24/T--WPI_Worcester--goat3.png/450px-T--WPI_Worcester--goat3.png">
+                            </a>
+                            <div class="figureCaption">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zsheer neme nshe</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+                <section>
+                    <h2>What isgfdf erer rrerett Lorem Ipsum?</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zhish eerhttty tterhe</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3>zheer rerer iuuee</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-2 placeholder"></div>
+        </div>
+    </div>
+    <div id="imageModal" class="figureModalWindow">
+
+        <!-- The Close Button -->
+        <span class="closeFigure">&times;</span>
+        
+        <!-- Modal Content (The Image) -->
+        <img class="figureModal-content" id="img01">
+        
+        <!-- Modal Caption (Image Text) -->
+        <div class="modalCaption">Lorem Ipsum</div>
+    </div>
+
     </div>
     
     <div class="container footer" id="footer-container">
@@ -273,8 +655,6 @@
         
       </div>
     </div>
-    <script>
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://2018.igem.org/Team:TU-Eindhoven/bootstrap_js?action=raw&ctype=text/javascript"></script>
     <script src="templates/TUeScript.js"></script>

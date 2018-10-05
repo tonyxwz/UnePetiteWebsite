@@ -4,6 +4,11 @@
   margin-top: 15px;
   z-index: 99;
 }
+@media only screen and (min-width: 768px){
+  .dropdown:hover .dropdown-menu {
+    display:block;
+  }
+}
 .logo {
   padding:5px;
 }
@@ -46,7 +51,10 @@ p {
   rgba(57, 44, 172, 0.801), rgba(126, 0, 151, 0.521));
   margin-bottom: 0;
 }
-#main {
+#main,
+.ethics-content,
+.safe-content,
+.stakeholder-content {
   margin-top: 15px;
   /* margin-top: 54px; */
   margin-bottom: 15px;
@@ -432,9 +440,55 @@ button.active:after {
 }
 
 /* Human Practice */
-.hp-content .placeholder h1 {
+.integrated-content .placeholder h1 {
   color:rgb(249, 255, 218);
 }
+.integrated-content,
+.ethics-content,
+.safe-content,
+.stakeholder-content {
+  display:none;
+}
+.activeTab {
+  display: block;
+}
+.inactiveTab {
+  display: none;
+}
+.hp-tabs > ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.hp-tabs ul li {
+  display:inline;
+}
+.hp-tabs ul li a {
+  display: inline-block;
+  width: 150px;
+}
+.hp-tabs button {
+  font-size: 20px;
+  height: 70px;
+  width: 200px;
+  white-space: normal;
+  /* border-color: #cc0234; */
+}
+.hp-tabs button:hover{
+  opacity: 0.9;
+}
+.int-btn.activeBtn,
+.int-btn:hover,
+.eth-btn.activeBtn,
+.eth-btn:hover,
+.saf-btn.activeBtn,
+.saf-btn:hover,
+.sta-btn.activeBtn,
+.sta-btn:hover {
+  background-color: #b66d6d;
+  color: #505050;
+}
+
 
 /* Timeline */
 /* The actual timeline (the vertical ruler) */

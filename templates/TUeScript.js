@@ -3,13 +3,7 @@ $(document).ready(function(){
   // set container height so that "sticky" functions
   $('.toc-column').height($('.docs').height());
   
-  $(window).resize(function(){
-    if ($(window).width() < 992) {
-      $('.toc-column').css("height", "100%");
-    } else {
-      $('.toc-column').height($('.docs').height());
-    }
-  });
+  $(window).resize(setTOCColumn);
   $(window).scroll(setTOCColumn);
   
   // smooth scrolling
@@ -20,8 +14,11 @@ $(document).ready(function(){
       scrollTop: $($.attr(this, 'href')).offset().top - offsetTop
     }, 300);
   });
+  // 
+  if(document.getElementsByClassName('activeTab').length == 0) {
+    generateTOC({'id':'#tableOfContent', 'src': '.docs section'});
+  }
 
-  generateTOC({'id':'tableOfContent', 'src': '.docs section'});
   // load json, pass to insertExplanation()
   insertExplanation();
 });
@@ -31,12 +28,18 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function setTOCColumn(){
-  if ($(window).width() < 992) {
-    $('.toc-column').css("height", "100%");
+  var tocColumn, docs;
+  if(document.getElementsByClassName('activeTab').length == 0) {
+    tocColumn = $('.toc-column');
+    docs = $('.docs');
   } else {
-    $('.toc-column').height($('.docs').height());
-    // console.log($('.toc-column').height());
-    // console.log($('.docs').height());
+    tocColumn = $('.activeTab .toc-column');
+    docs = $('.activeTab .docs');
+  }
+  if ($(window).width() < 992) {
+    tocColumn.css("height", "100%");
+  } else {
+    tocColumn.height(docs.height());
   }
 }
 
@@ -62,7 +65,7 @@ function generateTOC(options){
     liList.push("</ul></li>");
   }
   liList.push("</ul>\n");
-  var toc = document.getElementById(options['id']);
+  var toc = document.querySelector(options['id']);
   if (toc){
     toc.innerHTML = liList.join("");
   }
@@ -112,7 +115,7 @@ function openFigureModal(e){
 
 function openModal(e){
   var targetID = e.getAttribute('data-target');
-  console.log(targetID);
+  // console.log(targetID);
   var modal = document.querySelector(targetID);
   if (modal != null){
     modal.style.display = "block";
@@ -131,6 +134,22 @@ function openModal(e){
         html.style.overflow = 'auto';
       }
     });
+  }
+}
+
+function changeHPTabs(e){
+  // e.preventDefault();
+  let tabID = e.dataset.target;
+  $(".activeTab").toggleClass("activeTab");
+  $(tabID).toggleClass("activeTab");
+  $(".activeBtn").toggleClass("activeBtn");
+  e.classList.toggle("activeBtn");
+  generateTOC({'id':'.activeTab #tableOfContent', 'src': '.activeTab .docs section'});
+
+  if ($(window).width() < 992) {
+    $('.activeTab .toc-column').css("height", "100%");
+  } else {
+    $('.activeTab .toc-column').height($('.activeTab .docs').height());
   }
 }
 
