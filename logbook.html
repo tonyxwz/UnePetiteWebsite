@@ -90,14 +90,6 @@
             </div>
         </div>
     </nav>
-    <div class="jumbotron neat">
-        <div class="container">
-            <h1>Ready. Set. Code.</h1>
-            <p>Are you ready to boilerstrap your cross-compatible buzzword? We're Sassy, flat and semantic, so what are you waiting for?</p>
-            <br>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-        </div>
-    </div>
     <div class="container logbook neat" id="log-container">
         <h2>Log book</h2>
         <p>Log book is recorded weekly, you may find the significant breakthroughs in chronological order.</p>
@@ -110,68 +102,8 @@
         <option value="biobrick">Biobrick</option>
         <option value="organiclab">Organic lab</option>
         </select>
-
+        <!-- automation below -->
         <p></p>
-
-        <button class="accordion">Week 1, some other remarks</button>
-        <div class="panel">
-        <div class="ibp all">
-            <h1>Ice Binding Protein</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="cloning all">
-            <h1>Cloning</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="biobrick all">
-            <h1>Biobrick</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="organiclab all">
-            <h1>Organic lab</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        </div>
-
-        <button class="accordion">Week 2</button>
-        <div class="panel">
-        <div class="ibp all">
-            <h1>Ice Binding Protein</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="cloning all">
-            <h1>Cloning</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="biobrick all">
-            <h1>Biobrick</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="organiclab all">
-            <h1>Organic lab</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        </div>
-
-        <button class="accordion">Week 3</button>
-        <div class="panel">
-        <div class="ibp all">
-            <h1>Ice Binding Protein</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="cloning all">
-            <h1>Cloning</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="biobrick all">
-            <h1>Biobrick</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="organiclab all">
-            <h1>Organic lab</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        </div>
     </div>
     <div class="container footer" id="footer-container">
       <!-- 用图片来美化一下分割线 -->
@@ -211,20 +143,58 @@
     <script>
     // Catelogue
     var bGenerateCat = false;
-    var acc = document.getElementsByClassName("accordion");
-    var i;
 
-    for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight){
-        panel.style.maxHeight = null;
-        } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+    var xhr = new XMLHttpRequest();
+    xhr.overrideMimeType("application/json");
+    xhr.open("GET", "/Resources/logbook.json", true);
+    console.log("start generating logbook...");
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            var logJSON = JSON.parse(xhr.responseText);
+            var log = document.getElementById("log-container");
+            // var dates = Object.keys(logtext).length;
+            var trans = {'ibp':'Ice Binding Protein',
+                    'cloning':'Cloning',
+                    'biobrick':'Biobrick',
+                    'organiclab':'Organic Lab'
+                };
+            for(var key in logJSON) {
+                let btn = document.createElement("BUTTON");
+                btn.classList.add("accordion");
+                btn.innerHTML = key;
+                log.appendChild(btn);
+
+                let panel = document.createElement("DIV");
+                panel.classList.add("panel");
+                for(var part in logJSON[key]) {
+                    let h = document.createElement('H2');
+                    h.innerHTML = trans[part];
+
+                    let d = document.createElement("DIV");
+                    d.classList.add(part, "all");
+                    d.innerHTML = logJSON[key][part]["html"];
+                    d.insertBefore(h, d.firstChild);
+                    panel.appendChild(d);
+                }
+                log.appendChild(panel);
+            }
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                    } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
         }
-    });
     }
+    xhr.send(null);
 
     // change categories
     function changeCat(e) {

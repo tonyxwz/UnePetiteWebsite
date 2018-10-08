@@ -517,6 +517,26 @@ button.active:after {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+.all img {
+  max-width: 400px;
+  display:block;
+  margin:0 auto;
+}
+.all {
+  position: relative;
+}
+.ibp h2 {
+  color: #10487c;
+}
+.cloning h2 {
+  color: #2E2F31;
+}
+.biobrick h2 {
+  color: #000;
+}
+.organiclab h2 {
+  color: #444;
+}
 
 /* Human Practice */
 .integrated-content .placeholder h1 {
