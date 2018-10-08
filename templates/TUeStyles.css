@@ -336,6 +336,85 @@ img.figure {
       width: 100%;
   }
 }
+/* lab annotation */
+.annotationImg {
+  max-width: 600px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid blue;
+  padding: 3px;
+}
+.annotationImg img {
+  width: 100%;
+}
+.annotation-dot {
+  position: absolute;
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+  /* cursor: pointer; */
+  cursor: url(/images/zoom_in.png), auto;
+  border: 5px solid purple;
+  background-color: orangered;
+  opacity: 0.3;
+  border-radius: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.annotation-dot:hover {
+  opacity: 1;
+  animation-name: goSolid;
+  animation-duration: 0.7s;
+}
+@keyframes goSolid {
+  from {opacity: 0.5;}
+  to {opacity: 1};
+}
+/* .tooltiptext {
+  display: none;
+} */
+.tooltip {
+  /* position: relative; */
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+}
+.tooltip .anno-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+.tooltip .anno-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.tooltip:hover .anno-text {
+  visibility: visible;
+}
+.zoomInFrame {
+  padding:0px;
+  border:2px solid yellow;
+  max-width:300px;
+  background-color:white;
+}
+.zoomInFrame img{
+  width:100%;
+}
 
 /* toc */
 .docs, .introduction{
