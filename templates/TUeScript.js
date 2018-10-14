@@ -137,6 +137,15 @@ function openModal(e){
   }
 }
 
+function linksInModal(e){
+  console.log(e.target);
+  console.log(e.target.dataset.parentModal);
+  var modal = document.getElementById(e.target.dataset.parentModal);
+  var html = document.querySelector('html');
+  modal.style.display="none";
+  html.style.overflow="auto";
+}
+
 function changeHPTabs(e){
   // e.preventDefault();
   let tabID = e.dataset.target;
@@ -151,6 +160,33 @@ function changeHPTabs(e){
   } else {
     $('.activeTab .toc-column').height($('.activeTab .docs').height());
   }
+}
+
+// photo slides
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].classList.remove('active');
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].classList.add('active');
 }
 
 // extend jQuery
