@@ -90,6 +90,7 @@
             </div>
         </div>
     </nav>
+
     <div class="container logbook neat" id="log-container">
         <h2>Log book</h2>
         <p>Log book is recorded weekly, you may find the significant breakthroughs in chronological order.</p>
@@ -140,16 +141,64 @@
         </a>
       </div>
     </div>
+    <script src="http://2018.igem.org/Team:TU-Eindhoven/logbook?action=raw&ctype=text/javascript"></script>
     <script>
     // Catelogue
     var bGenerateCat = false;
+    document.addEventListener("DOMContentLoaded", function(){
+        console.log("start generating logbook...");
+            var logJSON = logJSONObj;
+            var log = document.getElementById("log-container");
+            // var dates = Object.keys(logtext).length;
+            var trans = {'ibp':'Ice Binding Protein',
+                    'cloning':'Cloning',
+                    'biobrick':'Biobrick',
+                    'organiclab':'Organic Lab'
+                };
+            for(var key in logJSON) {
+                let btn = document.createElement("BUTTON");
+                btn.classList.add("accordion");
+                btn.innerHTML = key;
+                log.appendChild(btn);
+
+                let panel = document.createElement("DIV");
+                panel.classList.add("panel");
+                for(var part in logJSON[key]) {
+                    let h = document.createElement('H2');
+                    h.innerHTML = trans[part];
+
+                    let d = document.createElement("DIV");
+                    d.classList.add(part, "all");
+                    d.innerHTML = logJSON[key][part]["html"];
+                    d.insertBefore(h, d.firstChild);
+                    panel.appendChild(d);
+                }
+                log.appendChild(panel);
+            }
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                    } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+    })
+
 
     var xhr = new XMLHttpRequest();
     xhr.overrideMimeType("application/json");
-    xhr.open("GET", "/Resources/logbook.json", true);
-    console.log("start generating logbook...");
+    // xhr.open("GET", "http://2018.igem.org/Team:TU-Eindhoven/logbook?action=raw&ctype=text/javascript", true);
+    
     xhr.onreadystatechange = function(){
         if (xhr.readyState == 4 && xhr.status == "200") {
+            console.log("start generating logbook...");
             var logJSON = JSON.parse(xhr.responseText);
             var log = document.getElementById("log-container");
             // var dates = Object.keys(logtext).length;
@@ -194,7 +243,7 @@
             }
         }
     }
-    xhr.send(null);
+    // xhr.send(null);
 
     // change categories
     function changeCat(e) {
