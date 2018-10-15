@@ -215,29 +215,32 @@ p {
   content: "]⇓";
   color: rgb(31, 112, 233);
 }
+.moreinfo {
+  cursor: pointer;
+  color: rgb(31, 112, 233);
+  text-decoration-style: underline;
+}
+.moreinfo::after {
+  content: "⇓";
+  color: rgb(31, 112, 233);
+}
 .disappear {
   display: none;
 }
-blockquote.explanation {
+.explanation {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
-blockquote.explanation::before {
+.explanation::before {
   color: #ccc;
   /* content: open-quote; */
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
-}
-blockquote.explanation h4{
-  color: rgb(0, 102, 255);
-}
-blockquote.explanation p {
-  display: inline;
 }
 /* figure */
 /* .figureWrapper {
@@ -280,7 +283,7 @@ img.figure {
 }
  /* Style the Image Used to Trigger the Modal */
 
-.figure:hover {opacity: 0.7;}
+.figure:hover {opacity: 0.8;}
 .modal-body .figure:hover {
   opacity: 1;
 }
@@ -308,6 +311,11 @@ img.figure {
   width: 80%;
   max-width: 700px;
 }
+.figureModal-content-wide {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+}
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 .modalCaption {
@@ -320,7 +328,9 @@ img.figure {
   padding: 10px 0;
   height: 150px;
 }
-
+.modalCaption p{
+  color: #ccc;
+}
 /* Add Animation - Zoom in the Modal */
 .figureModal-content, .modalCaption {
   animation-name: zoomFigure;
@@ -517,8 +527,8 @@ img.figure {
 
 /* logbook accordion */
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: #444;
+  color: #eee;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -530,7 +540,7 @@ img.figure {
 }
 
 button.active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #333;
 }
 
 .accordion:after {
@@ -545,12 +555,15 @@ button.active:after {
   content: "\2212";
 }
 
-.panel {
+.my-panel {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+.my-panel p {
+  text-align: justify;
 }
 .all img {
   max-width: 400px;
@@ -616,6 +629,11 @@ button.active:after {
 .inactiveTab {
   display: none;
 }
+.hp-heading {
+  background-image:url(http://2018.igem.org/wiki/images/9/98/T--TU-Eindhoven--HP-bkgrd.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .hp-tabs > ul{
   list-style-type: none;
   margin: 0;
@@ -646,7 +664,7 @@ button.active:after {
 .saf-btn:hover,
 .sta-btn.activeBtn,
 .sta-btn:hover {
-  background-color: #b66d6d;
+  background-color: #d5ff83;
   color: #505050;
 }
 

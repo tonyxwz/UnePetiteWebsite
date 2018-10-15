@@ -20,7 +20,7 @@ $(document).ready(function(){
   }
 
   // load json, pass to insertExplanation()
-  insertExplanation();
+  // insertExplanation();
 });
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -53,7 +53,7 @@ function generateTOC(options){
   for (var i = 0; i<sections.length;i++) {
     var s = sections[i];
     var h2 = s.querySelector('h2');
-    var id = idFromTxt(h2,i);
+    if(h2){var id = idFromTxt(h2,i);}
     liList.push("<li><a href=\"#"+ id +"\">"+ h2.innerHTML +"</a><ul>");
 
     var h3s = s.querySelectorAll('h3');
@@ -78,22 +78,14 @@ function idFromTxt(el, n){
   return elid;
 }
 
-function insertExplanation(exp){
+function showMore(e){
   // insert click-to-elaborate events
-  var sp = document.getElementsByClassName("klk2elaborate");
-  var i;
-
-  for(i=0;i<sp.length;i++){
-      sp[i].addEventListener('click', function(){
-        var id = this.textContent.replace(/[^\w]/g, '');
-        var bq = document.getElementById(id);
-        bq.classList.toggle('disappear')
-      });
-  }
+  var sp = document.getElementById(e.target.dataset.target);
+  sp.classList.toggle('disappear');
+  setTOCColumn();
 }
 
 function openFigureModal(e){
-  // console.log(e);
   var hdurl = e.querySelector('img').getAttribute('data-hdurl');
   if (!hdurl) {
     hdurl = e.querySelector('img').src;
@@ -104,13 +96,51 @@ function openFigureModal(e){
   var img = modal.querySelector('img');
   img.src = hdurl;
 
+  var caption = e.parentElement.querySelector(".figureCaption").innerHTML;
+  modal.querySelector(".modalCaption").innerHTML = caption;
+
   var html = document.querySelector('html');
   html.style.overflow = 'hidden';
   var closeBtn = modal.querySelector('.closeFigure');
   closeBtn.onclick = function(){
     modal.style.display = 'none';
     html.style.overflow = 'auto';
+  };
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      html.style.overflow = 'auto';
+    }
+  });
+}
+function openWideFigureModal(e){
+  // console.log(e);
+  var hdurl = e.querySelector('img').getAttribute('data-hdurl');
+  if (!hdurl) {
+    console.log("Why");
+    hdurl = e.querySelector('img').src;
   }
+  var modal = document.getElementById('wideImageModal');
+  modal.style.display = "block";
+
+  var img = modal.querySelector('img');
+  img.src = hdurl;
+  var caption = e.parentElement.querySelector(".figureCaption").innerHTML;
+  modal.querySelector(".modalCaption").innerHTML = caption;
+
+  var html = document.querySelector('html');
+  html.style.overflow = 'hidden';
+  var closeBtn = modal.querySelector('.closeFigure');
+  closeBtn.onclick = function(){
+    modal.style.display = 'none';
+    html.style.overflow = 'auto';
+  };
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      html.style.overflow = 'auto';
+    }
+  });
 }
 
 function openModal(e){
