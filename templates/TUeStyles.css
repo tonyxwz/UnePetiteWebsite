@@ -1100,3 +1100,20 @@ ul.nav.navbar-nav.navbar-right {
 .sponsors-list a {
   padding-right: 0;
 }
+#HQ_page .introduction h1,
+#HQ_page .timelineHead h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#HQ_page .jumbotron h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 2px 2px #860000;
+}
+#HQ_page .tl-content h3 {
+  padding-top: 0px;
+}
+.jumbotron h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 2px 2px #860000;
+}
