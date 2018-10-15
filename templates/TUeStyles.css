@@ -181,6 +181,15 @@ h6 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #10487c;
 }
+#HQ_page h1,
+#HQ_page h2,
+#HQ_page h3,
+#HQ_page h4,
+#HQ_page h5,
+#HQ_page h6 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #10487c;
+}
 .myAnswer {
   padding-left:30px;
 }
@@ -1108,7 +1117,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 #HQ_page .jumbotron h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-shadow: 2px 2px #5d0086;
+  text-shadow: 2px 2px rgb(77, 77, 77);
 }
 #HQ_page .tl-content h3 {
   padding-top: 0px;
