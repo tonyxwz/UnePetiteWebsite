@@ -53,9 +53,10 @@ function generateTOC(options){
   for (var i = 0; i<sections.length;i++) {
     var s = sections[i];
     var h2 = s.querySelector('h2');
-    if(h2){var id = idFromTxt(h2,i);}
-    liList.push("<li><a href=\"#"+ id +"\">"+ h2.innerHTML +"</a><ul>");
-
+    if(h2) {
+      var id = idFromTxt(h2,i);
+      liList.push("<li><a href=\"#"+ id +"\">"+ h2.innerHTML +"</a><ul>");
+    }
     var h3s = s.querySelectorAll('h3');
     for (var j = 0; j < h3s.length; j++) {
       var h3 = h3s[j];
@@ -91,25 +92,24 @@ function openFigureModal(e){
     hdurl = e.querySelector('img').src;
   }
   var modal = document.getElementById('imageModal');
-  modal.style.display = "block";
-
   var img = modal.querySelector('img');
   img.src = hdurl;
-
   var caption = e.parentElement.querySelector(".figureCaption").innerHTML;
   modal.querySelector(".modalCaption").innerHTML = caption;
-
   var html = document.querySelector('html');
   html.style.overflow = 'hidden';
+  modal.style.display = "block";
   var closeBtn = modal.querySelector('.closeFigure');
   closeBtn.onclick = function(){
     modal.style.display = 'none';
     html.style.overflow = 'auto';
+    img.src = "";
   };
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
       html.style.overflow = 'auto';
+      img.src = "";
     }
   });
 }
@@ -120,25 +120,27 @@ function openWideFigureModal(e){
     console.log("Why");
     hdurl = e.querySelector('img').src;
   }
-  var modal = document.getElementById('wideImageModal');
-  modal.style.display = "block";
 
+  var modal = document.getElementById('wideImageModal');
   var img = modal.querySelector('img');
   img.src = hdurl;
   var caption = e.parentElement.querySelector(".figureCaption").innerHTML;
   modal.querySelector(".modalCaption").innerHTML = caption;
-
   var html = document.querySelector('html');
   html.style.overflow = 'hidden';
+  modal.style.display = "block";
+
   var closeBtn = modal.querySelector('.closeFigure');
   closeBtn.onclick = function(){
     modal.style.display = 'none';
     html.style.overflow = 'auto';
+    img.src = "";
   };
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
       html.style.overflow = 'auto';
+      img.src = "";
     }
   });
 }
