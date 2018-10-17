@@ -253,46 +253,6 @@ div.contents {
   background: #ffffff;
   box-shadow: 2px 2px 10px #919191;
 }
-.klk2elaborate {
-  cursor: pointer;
-}
-.klk2elaborate::before {
-  content:"[";
-  color: green;
-}
-.klk2elaborate::after {
-  content: "]⇓";
-  color: green;
-}
-.explanation {
-  display: none;
-}
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote::before {
-  color: #ccc;
-  /* content: open-quote; */
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
-
-.iGEMfigure > img {
-  max-width: 90%;
-  margin: 10px auto;
-}
-.iGEMcaption {
-  margin: 10px auto;
-}
 /* footer */
 .footer
 {
@@ -333,6 +293,7 @@ body {
   font-weight: normal;
   background-image: url("http://2018.igem.org/wiki/images/e/e6/T--TU-Eindhoven--BGgraySpread150.png");
   background-repeat: repeat-xy;
+  background-attachment: fixed;
 }
 h1,
 h2,
@@ -398,6 +359,16 @@ code {
   background: hsl(209, 100%, 10%);
   overflow: scroll;
 }
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .hero {
   box-sizing: border-box;
   padding: 2rem;
@@ -592,4 +563,9 @@ ul.normal-menu li
 .bio > h1
 {
   font-size:1rem;
+}
+
+.calendar__category {
+  background-color: #CCDFCB
+  
 }
