@@ -29,7 +29,9 @@
             color: #777;
         }
         
-        .bgimg-1, .bgimg-2, .bgimg-3 {
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
             position: relative;
             /* opacity: 0.65; */
             background-attachment: fixed;
@@ -39,7 +41,7 @@
         }
         .bgimg-1 {
             background-image: url("/images/frontpage/center.jpg");
-            min-height: 700px;
+            min-height: 500px;
         }
         
         .bgimg-2 {
@@ -78,9 +80,70 @@
         
         /* Turn off parallax scrolling for tablets and phones */
         @media only screen and (max-device-width: 1024px) {
-            .bgimg-1, .bgimg-2, .bgimg-3 {
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
                 background-attachment: scroll;
             }
+        }
+        .jumbotron{
+          padding:0;
+          position:relative;
+        }
+        video#bgvid { 
+          /* position: fixed;
+          top: 50%;
+          left: 50%; */
+          width: 100%;
+          /* height: auto; */
+          z-index: -100;
+          /* -ms-transform: translateX(-50%) translateY(-50%);
+          -moz-transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translateX(-50%) translateY(-50%); */
+          /* transform: translateX(-50%) translateY(-50%); */
+          background: url(/images/VIDEO-IGEM_Trim.mp4_snapshot_00.21_[2018.10.17_14.30.27].jpg) no-repeat;
+          /* background-size: cover;  */
+          margin-bottom:-10px;
+        }
+        .video-text,
+        .videoCtrl {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+
+          /* font-size: 7vw; */
+          line-height: 1.5em;
+          color: rgb(141, 49, 194);
+          text-align: center;
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          /* display: none; */
+        }
+        .playBtn {
+            background-color:transparent;
+            border-width: 0px;
+        }
+        .playBtn img {
+            width:100px;
+            opacity:0.2;
+        }
+        .playBtn:hover img {
+            opacity:0.7;
+        }
+        #videoModal video {
+            width: 80%;
+            margin:0 auto;
+            top: 50%;
+            left: 50%;
+            transform: translateX(12.5%) translateY(10%);
+        }
+        #videoModal {
+            padding-top:0;
+        }
+        .closeFigure {
+            position:fixed;
+            top:25px;
+            right:45px;
         }
     </style>
      <script>
@@ -159,16 +222,34 @@
             </div>
         </div>
     </nav>
+
+    <div class="jumbotron neat">
+        <video id="bgvid" playsinline autoplay muted loop poster="http://2018.igem.org/wiki/images/a/ad/T--TU-Eindhoven--homepageVideoThumbnail.jpeg">
+            <source src="http://2018.igem.org/wiki/images/5/5c/T--TU-Eindhoven--FullscreenVideo.mp4" type="video/mp4">
+        </video>
+        <!-- <div class="video-text">
+            Welcome to GelCatraz!
+        </div> -->
+        <div class="videoCtrl">
+            <button class="playBtn" onclick="showVideoModal(this)" data-vid-url="http://2018.igem.org/wiki/images/5/5c/T--TU-Eindhoven--FullscreenVideo.mp4">
+                <img src="http://2018.igem.org/wiki/images/d/dc/T--TU-Eindhoven--VideoPlayBtn.png">
+            </button>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
+        <div>
+            <!-- if our video is ready -->
+        </div>
         <div class="bgimg-1">
             <div class="caption">
             <span class="border">WELCOME TO GELCATRAZ</span>
             </div>
         </div>
         
-        <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-            <h3 style="text-align:center;">Parallax Demo</h3>
+        <div style="color: #777;background-color:white;text-align:center;padding:50px 20%;text-align: justify;">
+            <h3 style="text-align:center;">Narrow Demo</h3>
             <p>Parallax scrolling is a web site trend where the background content
             is moved at a different speed than the foreground content while 
         scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis 
@@ -192,7 +273,7 @@
         </div>
         
         <div style="position:relative;">
-            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 20%;text-align: justify;">
             <p style="color:#ddd;">Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
             </div>
         </div>
@@ -204,7 +285,7 @@
         </div>
         
         <div style="position:relative;">
-            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 20%;text-align: justify;">
             <p style="color:#ddd;">Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
             </div>
         </div>
@@ -216,6 +297,18 @@
         </div>
         </div>
     </div>
+
+    <div id="videoModal" class="figureModalWindow">
+
+        <!-- The Close Button -->
+        <span class="closeFigure">&times;</span>
+        
+        <!-- Modal Content (The Image) -->
+        <video controls playsinline loop poster="http://2018.igem.org/wiki/images/a/ad/T--TU-Eindhoven--homepageVideoThumbnail.jpeg">
+            <source src="http://2018.igem.org/wiki/images/5/5c/T--TU-Eindhoven--FullscreenVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <div class="container footer" id="footer-container">
       <!-- 用图片来美化一下分割线 -->
       <div class="sponsors-list row">
@@ -262,5 +355,38 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://2018.igem.org/Team:TU-Eindhoven/bootstrap_js?action=raw&ctype=text/javascript"></script>
+    <script>
+        function showVideoModal(e){
+            // console.log(e);
+            var vidurl = e.dataset.vidUrl;
+            if (!vidurl) {
+                console.log("error");
+                return
+            }
+            var modal = document.getElementById('videoModal');
+            modal.style.display = "block";
+
+            var vid = modal.querySelector("video");
+            vid.querySelector('source').src=vidurl;
+            vid.play();
+            var html = document.querySelector('html');
+            html.style.overflow = 'hidden';
+            
+            var closeBtn = modal.querySelector('.closeFigure');
+            closeBtn.onclick = function(){
+                modal.style.display = 'none';
+                html.style.overflow = 'auto';
+                vid.pause();
+                vid.currentTime = 0;
+            };
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    html.style.overflow = 'auto';
+                    vid.pause();
+                }
+            });
+        }
+    </script>
   </body>
 </html>
