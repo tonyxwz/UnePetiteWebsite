@@ -189,6 +189,8 @@ h6 {
 #HQ_page h6 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #10487c;
+  padding-top:0;
+  padding-bottom:0;
 }
 .myAnswer {
   padding-left:30px;
@@ -232,6 +234,9 @@ p {
 .moreinfo::after {
   content: "⇓";
   color: rgb(31, 112, 233);
+}
+.moreinfo:hover {
+  text-decoration: underline;
 }
 .disappear {
   display: none;
@@ -464,7 +469,7 @@ img.figure {
 }
 .introduction {
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 .introduction h1 {
   margin-left: auto;
@@ -536,8 +541,8 @@ img.figure {
 
 /* logbook accordion */
 .accordion {
-  background-color: #444;
-  color: #eee;
+  background-color: #eee;
+  color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -546,10 +551,11 @@ img.figure {
   outline: none;
   font-size: 15px;
   transition: 0.4s;
+  margin-bottom:3px;
 }
 
 button.active, .accordion:hover {
-  background-color: #333;
+  background-color: #ddd;
 }
 
 .accordion:after {
@@ -1125,4 +1131,24 @@ ul.nav.navbar-nav.navbar-right {
 .jumbotron h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-shadow: 2px 2px #5d0086;
+}
+.myTooltips {
+  position:fixed;
+  border-radius:5px;
+  border: 2px solid #444;
+  max-width:500px;
+  /* min-height:100px; */
+  background-color:wheat;
+  padding:10px;
+}
+.myTooltips p {
+  font-size:12px;
+}
+.myTooltips button {
+  position: absolute;
+  bottom:5px;
+  right:5px;
+}
+.tooltipsBtn {
+  cursor:help;
 }
