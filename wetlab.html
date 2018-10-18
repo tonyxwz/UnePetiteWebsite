@@ -15,14 +15,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        .placeholder {
-            /* background-color: aqua; */
-            text-align: center;
-            padding:40px;
-        }
+      .container {
+        height:100%;
+      }
     </style>
-     <script>
-    </script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -97,38 +93,27 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container-fluid main-wrapper">
-      <div class="container white round" id="main">
-        <h1 id="protocols">Protocols</h1>
-        <p>Below, the protocols we’ve used during our labwork are listed. They can be downloaded in pdf format.</p>
-        <h2 id="general-protocols">General protocols </h2>
-        <p><a href="http://2018.igem.org/wiki/images/6/60/T--TU-Eindhoven--TU_Eindhoven_Protocols_Preparation_of_general_necessities.pdf">Preparation general necessities</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/1/14/T--TU-Eindhoven--TU_Eindhoven_Protocols_Glycerol_Stock.pdf">Glycerol stock</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/e/e3/T--TU-Eindhoven--TU_Eindhoven_Protocols_Streaking_Glycerol_Stock.pdf">Streaking glycerol stock</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/1/15/T--TU-Eindhoven--TU_Eindhoven_Protocols_NanoDrop.pdf">Nanodrop</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/9/93/T--TU-Eindhoven--TU_Eindhoven_Protocols_Agarose_Gel_Electrophoresis.pdf">Agarose gel electrophoresis</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/9/98/T--TU-Eindhoven--TU_Eindhoven_Protocols_SDS-Page_Analysis.pdf">SDS-Page</a></p>
-        <h2 id="cloning-and-biobricking">Cloning and BioBricking </h2>
-        <p><a href="http://2018.igem.org/wiki/images/c/c1/T--TU-Eindhoven--TU_Eindhoven_Protocols_PCR_Amplification.pdf">PCR Amplification</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/5/52/T--TU-Eindhoven--TU_Eindhoven_Protocols_Digestion.pdf">Digestion</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/5/57/T--TU-Eindhoven--TU_Eindhoven_Protocols_Ligation.pdf">Ligation</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/2/2a/T--TU-Eindhoven--TU_Eindhoven_Protocols_Vector_Linearization.pdf">Vector linearization</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/3/38/T--TU-Eindhoven--TU_Eindhoven_Protocols_Gibson_assembly.pdf">Gibson assembly</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/4/48/T--TU-Eindhoven--TU_Eindhoven_Protocols_Gel_purification.pdf">Gel purification</a></p>
-        <h2 id="transformation-and-protein-expression">Transformation and protein expression</h2>
-        <p><a href="http://2018.igem.org/wiki/images/b/ba/T--TU-Eindhoven--TU_Eindhoven_Protocols_Transformation_Into_Competent_Cells.pdf">Transformation into competent cells</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/f/f8/T--TU-Eindhoven--TU_Eindhoven_Protocols_Plating.pdf">Plating</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/2/2b/T--TU-Eindhoven--TU_Eindhoven_Protocols_Colony_Picking_Colony_PCR.pdf">Colony picking and Colony PCR</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/7/7f/T--TU-Eindhoven--TU_Eindhoven_Protocols_Preparing_BaseClear_Sequencing_Samples.pdf">Sequencing at BaseClear</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/8/82/T--TU-Eindhoven--TU_Eindhoven_Protocols_Miniprep.pdf">Miniprep</a></p>
-        <p><a href="http://2018.igem.org/wiki/images/b/b7/T--TU-Eindhoven--TU_Eindhoven_Protocols_Small_Culturing.pdf">Small culturing</a></p>
-        <h2 id="project-specific-protocols">Project specific protocols</h2>
-        <p><a href="http://2018.igem.org/wiki/images/5/52/T--TU-Eindhoven--TU_Eindhoven_Protocols_IBP_protocols.pdf">Hydrogel seeding experiments</a></p>
+      <div class="container">
+        <h1>wetlab</h1>
       </div>
+
+    <div id="imageModal" class="figureModalWindow">
+
+        <!-- The Close Button -->
+        <span class="closeFigure">&times;</span>
+        
+        <!-- Modal Content (The Image) -->
+        <img class="figureModal-content" id="img01">
+        
+        <!-- Modal Caption (Image Text) -->
+        <div class="modalCaption">Lorem Ipsum</div>
     </div>
-    
+    </div> 
+
     <div class="container footer" id="footer-container">
+      <!-- 用图片来美化一下分割线 -->
       <div class="sponsors-list row">
           <a href="https://www.dsm.com">
               <img class="sponsoren" src="http://2018.igem.org/wiki/images/thumb/0/09/T--TU-Eindhoven--Sponsor_DSM.png/320px-T--TU-Eindhoven--Sponsor_DSM.png">
@@ -156,23 +141,26 @@
           </a>
       </div>
       <div class="neat row contactus">
-        <div class="col-xs-12 col-lg-2" style="background-color: #9540FF"></div>
-        <div class="col-xs-12 col-lg-2" style="background-color: #E841A0"></div>
+        <div class="col-xs-6 col-lg-2" style="background-color: #9540FF"></div>
+        <div class="col-xs-6 col-lg-2" style="background-color: #E841A0"></div>
         <div class="col-xs-12 col-lg-4" style="background-color: #FF8054">
             <a href="mailto:igem&#064;tue&#046;nl">
                 <img src="http://2018.igem.org/wiki/images/4/47/T--TU-Eindhoven--mail.png">&nbsp;igem&#064;tue&#046;nl
             </a>
             <a href="https://www.facebook.com/iGEMTUEindhoven">
-                <img src="http://2018.igem.org/wiki/images/e/e7/T--TU-Eindhoven--facebook.png">&nbsp;iGEMTUEindhoven
+                <img src="http://2018.igem.org/wiki/images/e/e7/T--TU-Eindhoven--facebook.png"><span>&nbsp;iGEMTUEindhoven</span>
             </a>
         </div>
-        <div class="col-xs-12 col-lg-2" style="background-color: #E8AD41"></div>
-        <div class="col-xs-12 col-lg-2" style="background-color: #FFF444"></div>
+        <div class="col-xs-6 col-lg-2" style="background-color: #E8AD41"></div>
+        <div class="col-xs-6 col-lg-2" style="background-color: #FFF444"></div>
         
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://2018.igem.org/Team:TU-Eindhoven/bootstrap_js?action=raw&ctype=text/javascript"></script>
+    <!-- <script src="http://2018.igem.org/Team:TU-Eindhoven/TUeScript?action=raw&ctype=text/javascript"></script> -->
     <script src="/templates/TUeScript.js"></script>
   </body>
+  <script>
+  </script>
 </html>

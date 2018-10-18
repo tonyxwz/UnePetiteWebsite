@@ -14,143 +14,25 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font: 400 15px/1.8 "Lato", sans-serif;
-            color: #777;
-        }
-        
-        .bgimg-1,
-        .bgimg-2,
-        .bgimg-3 {
-            position: relative;
-            /* opacity: 0.65; */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .bgimg-1 {
-            background-image: url(http://2018.igem.org/wiki/images/c/c9/T--TU-Eindhoven--BgImg1.jpeg);
-            min-height: 500px;
-        }
-        
-        .bgimg-2 {
-            background-image: url(http://2018.igem.org/wiki/images/a/ad/T--TU-Eindhoven--homepageVideoThumbnail.jpeg);
-            min-height: 400px;
-        }
-        
-        .bgimg-3 {
-            background-image: url("/images/frontpage/sissy.jpg");
-            min-height: 400px;
-        }
-        
-        .caption {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 100%;
+        .placeholder {
+            /* background-color: aqua; */
             text-align: center;
-            color: #000;
+            padding:40px;
         }
-        
-        .caption span.border {
-            line-height: 150%;
-            background-color: #111;
-            color: #fff;
-            padding: 18px;
-            font-size: 25px;
-            letter-spacing: 3px;
+        h1,h2 {
+            text-align: center;
         }
-        
-        h3 {
-            text-transform: uppercase;
-            font: 20px "Lato", sans-serif;
-            color: #111;
-        }
-        
-        /* Turn off parallax scrolling for tablets and phones */
-        @media only screen and (max-device-width: 1024px) {
-            .bgimg-1,
-            .bgimg-2,
-            .bgimg-3 {
-                background-attachment: scroll;
-            }
-        }
-        .jumbotron{
-          padding:0;
-          position:relative;
-        }
-        video#bgvid { 
-          /* position: fixed;
-          top: 50%;
-          left: 50%; */
-          width: 100%;
-          /* height: auto; */
-          z-index: -100;
-          /* -ms-transform: translateX(-50%) translateY(-50%);
-          -moz-transform: translateX(-50%) translateY(-50%);
-          -webkit-transform: translateX(-50%) translateY(-50%); */
-          /* transform: translateX(-50%) translateY(-50%); */
-          background: url(/images/VIDEO-IGEM_Trim.mp4_snapshot_00.21_[2018.10.17_14.30.27].jpg) no-repeat;
-          /* background-size: cover;  */
-          margin-bottom:-10px;
-          cursor:pointer;
-        }
-        .video-text,
-        .videoCtrl {
-          position: absolute;
-          top: 50%;
-          right:1%;
-
-          /* font-size: 7vw; */
-          line-height: 1.5em;
-          color: rgb(141, 49, 194);
-          text-align: center;
-          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          /* display: none; */
-        }
-        .playBtn {
-            background-color:transparent;
-            border-width: 0px;
-        }
-        .playBtn img {
+        .medal-img {
             width:100px;
-            opacity:0.2;
         }
-        .playBtn:hover img {
-            opacity:0.7;
+        .wrapper {
+            width:100%;
+            text-align: center;
         }
-        #videoModal video {
-            width: 85%;
-            margin:0 auto;
-            top: 50%;
-            left: 50%;
-            transform: translateX(9%) translateY(9%);
-        }
-        #videoModal {
-            padding-top:0;
-        }
-        .closeFigure {
-            position:fixed;
-            top:25px;
-            right:45px;
-        }
-        #tueMessage:hover {
-            background-color:rgba(255, 255, 255, 0.746);
-        }
-        #tueMessage {
-            cursor:default;
-        }
-        a:hover{
-            text-decoration: none;
-        }
-
     </style>
-
+     <script>
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -225,73 +107,48 @@
             </div>
         </div>
     </nav>
-
-    <div class="jumbotron neat">
-        <video id="bgvid" playsinline autoplay muted loop 
-            poster="http://2018.igem.org/wiki/images/a/ad/T--TU-Eindhoven--homepageVideoThumbnail.jpeg"
-            data-vid-url="http://2018.igem.org/wiki/images/5/5c/T--TU-Eindhoven--FullscreenVideo.mp4"
-            onclick="showVideoModal(this);">
-            <source src="http://2018.igem.org/wiki/images/1/18/T--TU-Eindhoven--ShortVideoMuted.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row">
-        <div>
-            <!-- if our video is ready -->
-        </div>
-        <div class="bgimg-1">
-            <div class="caption">
-                <span class="border">Welcome to GelCatraz: Where <em>E. coli</em> goes to stay!</span>
+    
+    <div class="container-fluid main-wrapper">
+      <div class="container white round" id="main">
+            <h1 id="medal-requirements">Medal Requirements</h1>
+            <h2 id="bronze-medal">Bronze Medal</h2>
+            <div class="wrapper">
+                <img class="medal-img" src="http://2018.igem.org/wiki/images/thumb/5/55/T--TU-Eindhoven--bronzemedal.png/240px-T--TU-Eindhoven--bronzemedal.png">
             </div>
-        </div>
-        
-        <div style="color: #777;background-color:white;padding:50px 25%;text-align:justify;">
-            <p>Living biomaterials are an innovative type  of device with wide-ranging implications. Combining the
-                flexibility of living cells with biocompatiblematerials, this new class of devices is expected to
-                impact many fields and assist society in dealing with the challenges ahead. Bacterial are a
-                particularly attractive platform since they can be genetically "tailored" to produce many different
-                types of proteins in response to almost any known type of chemical, physical or biological change.
-            </p>
-            <p>
-                Unfortunately, this potential is held back by challenges like maintaining the viability, functionality
-                and safety of the living components  in freestanding materials and devices. One of the biggest
-                challenges in applying this emerging technology to real-world problems preventing bacterial leakage
-                while allowing for adequate diffusion of nutrients and products. In our project, we aimed to bring the
-                application of living materials a step closer to being realized. In the past several months we have
-                worked on our <a href="http://2018.igem.org/Team:TU-Eindhoven/Design">design</a> of a novel platform. Using an adhesive protein originating from arctic bacteria,
-                we <a href="http://2018.igem.org/Team:TU-Eindhoven/Results">successfully</a> reduced bacterial leakage by inducing genetically engineered <em>E. coli</em> to bind
-                to a dextran hydrogel with macroporous character. We used the modularity of our platform in a wound
-                healing application, integrating in our design insights from our <a href="http://2018.igem.org/Team:TU-Eindhoven/Model">models</a> and <a href="http://2018.igem.org/Team:TU-Eindhoven/Human_Practices#stakeholder-container">feedback from stakeholders</a>.
-                We believe we have successfully completed all <a href="http://2018.igem.org/Team:TU-Eindhoven/Medal_Requirements">medal requirements</a> and have managed to <a href="http://2018.igem.org/Team:TU-Eindhoven/Results">demonstate</a> our
-                project in a prototype.
-            </p>
-        </div>
-        
-        <div class="bgimg-2">
-            <div class="caption">
-            <span id="tueMessage" class="border" style="background-color:rgba(255, 255, 255,0.5); font-size:25px;color: #312626;">
-                Made with <span style="color:red">❤</span> from <span style="color:red">TU/e</span>
-            </span>
+            <ul>
+            <li><p>We have registered for iGEM, had a great iGEM season and will attend the Giant Jamboree.</p></li>
+            <li><p>We have met the deliverables.</p></li>
+            <li><p>We have documented our project on our WIKI.</p></li>
+            <li><p>We will present a poster about our project at the Giant Jamboree.</p></li>
+            <li><p>We will present our project in a 20 minute presentation at the Giant Jamboree.</p></li>
+            <li><p>We filled in and submitted the <a href="http://2018.igem.org/Team:TU-Eindhoven/Safety">Safety Forms</a> and <a href="http://igem.org/2018_Judging_Form?team=TU-Eindhoven">Judging Form</a>.</p></li>
+            <li><p>We have attributed all parts of our <a href="http://2018.igem.org/Team:TU-Eindhoven/Attributions">project</a>.</p></li>
+            <li><p>We participated in the <a href="http://2018.igem.org/Team:TU-Eindhoven/InterLab">Interlab Measurement Study</a> and documented our results.</p></li>
+            </ul>
+
+            <h2 id="silver-medal">Silver Medal</h2>
+            <div class="wrapper">
+                <img class="medal-img" src="http://2018.igem.org/wiki/images/thumb/8/83/T--TU-Eindhoven--silvermedal.png/240px-T--TU-Eindhoven--silvermedal.png">
             </div>
-        </div>
-        
-        </div>
+            <ul>
+            <li><p>We have documented a new BioBrick: Carbohydrate-binding domain from <em>Mp</em>IBP: <a href="http://parts.igem.org/Part:BBa_K2812000">BBa_K2812000</a>.</p></li>
+            <li><p>We have done several <a href="http://2018.igem.org/Team:TU-Eindhoven/Collaborations">collaborations</a>, like the Postcard exchange, visiting meetups and we will also organize a Dutch meetup ourselves! The most meaningful collaboration was with iGEM team Hamburg. We shared our hydrogel with them so that they could analyze it and potentially use it for their project.</p></li>
+            <li><p>We collaborated with the Dutch Institute for Health and environment to make our project <a href="http://2018.igem.org/Team:TU-Eindhoven/Human_Practices">Safe-by-Design</a> and we looked at the rules and regulations regarding GMOs to consider future implementation of the application of our project. We also <a href="http://2018.igem.org/Team:TU-Eindhoven/Public_Engagement">visited</a> several institutes and hospitals to learn more about wound infections and discussed our project with several experts.</p></li>
+            </ul>
+
+            <h2 id="gold-medal">Gold Medal</h2>
+            <div class="wrapper"><img class="medal-img" src="http://2018.igem.org/wiki/images/thumb/7/71/T--TU-Eindhoven--goldenmedal.png/240px-T--TU-Eindhoven--goldenmedal.png"></div>
+            <ul>
+            <li><p>We integrated the feedback from experts and stakeholders into our <a href="http://2018.igem.org/Team:TU-Eindhoven/Design">design</a> and <a href="http://2018.igem.org/Team:TU-Eindhoven/Applied_Design">applied design</a>. Inspired by the concept of Safe-by-Design, we made several design iterations to improve on the safety of our project. We also informed our design choices based on an <a href="http://2018.igem.org/Team:TU-Eindhoven/Human_Practices">ethical analysis</a>.</p></li>
+            <li><p>We have improved existing BioBrick BBa_K748002 by codon-optimizing it and adding a thrombin-secretion tag, creating our improved BioBrick <a href="http://parts.igem.org/Part:BBa_K2812004">BBa_K2812004</a>.</p></li>
+            <li><p>We have <a href="http://2018.igem.org/Team:TU-Eindhoven/Model">modeled</a> different aspects our project to gain more insight of the properties of our hydrogel and the diffusion of our proteins and bacteria.</p></li>
+            <li><p>We have <a href="http://2018.igem.org/Team:TU-Eindhoven/Demonstrate">demonstrated</a> that our project works.</p></li>
+            </ul>
+            
+      </div>
     </div>
-
-    <div id="videoModal" class="figureModalWindow">
-
-        <!-- The Close Button -->
-        <span class="closeFigure">&times;</span>
-        
-        <!-- Modal Content (The Image) -->
-        <video controls playsinline loop poster="http://2018.igem.org/wiki/images/a/ad/T--TU-Eindhoven--homepageVideoThumbnail.jpeg">
-            <source src="http://2018.igem.org/wiki/images/5/5c/T--TU-Eindhoven--FullscreenVideo.mp4" type="video/mp4">
-        </video>
-    </div>
-
+    
     <div class="container footer" id="footer-container">
-      <!-- 用图片来美化一下分割线 -->
       <div class="sponsors-list row">
           <a href="https://www.dsm.com">
               <img class="sponsoren" src="http://2018.igem.org/wiki/images/thumb/0/09/T--TU-Eindhoven--Sponsor_DSM.png/320px-T--TU-Eindhoven--Sponsor_DSM.png">
@@ -336,38 +193,6 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://2018.igem.org/Team:TU-Eindhoven/bootstrap_js?action=raw&ctype=text/javascript"></script>
-    <script>
-        function showVideoModal(e){
-            // console.log(e);
-            var vidurl = e.dataset.vidUrl;
-            if (!vidurl) {
-                console.log("error");
-                return
-            }
-            var modal = document.getElementById('videoModal');
-            modal.style.display = "block";
-
-            var vid = modal.querySelector("video");
-            vid.querySelector('source').src=vidurl;
-            vid.play();
-            var html = document.querySelector('html');
-            html.style.overflow = 'hidden';
-            
-            var closeBtn = modal.querySelector('.closeFigure');
-            closeBtn.onclick = function(){
-                modal.style.display = 'none';
-                html.style.overflow = 'auto';
-                vid.pause();
-                vid.currentTime = 0;
-            };
-            window.addEventListener('click', function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                    html.style.overflow = 'auto';
-                    vid.pause();
-                }
-            });
-        }
-    </script>
+    <script src="/templates/TUeScript.js"></script>
   </body>
 </html>
